@@ -8,7 +8,7 @@ Here is Tony!
 
 Here is Hadley!
 
-Tony after texting gits, final texting
+Tony after testing gits, final testing
 
 ## [License](LICENSE)
 
