@@ -2,9 +2,11 @@ Project 3 Front End
 
 more to come later
 
-Nick is here
+Nick is here!
 
-Here is Tony 
+Here is Tony!
+
+Here is Hadley!
 
 ## [License](LICENSE)
 
