@@ -2,13 +2,16 @@ Project 3 Front End
 
 more to come later
 
-Nick is here!
+Nick is here! FOR REAL THIS TIME.
 
 Here is Tony!
 
 Here is Hadley!
 
 FInally!
+
+Tony after testing gits, final testing
+
 
 ## [License](LICENSE)
 
