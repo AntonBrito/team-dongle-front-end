@@ -2,7 +2,6 @@
 
 const config = {
   apiOrigins: {
-    // production: 'https://cms-express-api.herokuapp.com/'
     production: 'http://localhost:4741'
   }
 }

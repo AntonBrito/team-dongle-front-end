@@ -1,18 +1,14 @@
 'use strict'
-const app = require('./app.js')
-const config = require('../config')
+const app = require('../app.js')
+const getFormFields = require('../../../lib/get-form-fields.js')
+// Not sure this require is necessary here
+// const config = require('../config')
 
 const signUp = (data) => {
   return $.ajax({
     url: app.host + '/sign-up/',
     method: 'POST',
-    data: {
-      'credentials': {
-        'email': data.credentials.email,
-        'password': data.credentials.password,
-        'password_confirmation': data.credentials.password
-      }
-    }
+    data
   })
 }
 
@@ -20,12 +16,7 @@ const signIn = (data) => {
   return $.ajax({
     url: app.host + '/sign-in/',
     method: 'POST',
-    data: {
-      'credentials': {
-        'email': data.credentials.email,
-        'password': data.credentials.password
-      }
-    }
+    data
   })
 }
 
@@ -62,5 +53,6 @@ module.exports = {
   signIn,
   signUp,
   changePassword,
-  signOut
+  signOut,
+  getFormFields
 }
