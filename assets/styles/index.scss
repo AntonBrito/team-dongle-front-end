@@ -1,2 +1,78 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import '~./custom';
+
+header {
+  background-color: $azul;
+}
+
+.dropbtn {
+  background-color: $azul;
+  border: 0;
+  color: $cream;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 16px;
+}
+
+.botton {
+  float: right;
+  margin-left: 20px;
+  margin-top: 0px;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content {
+  background-color: $lightgrey;
+  // box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  display: none;
+  min-width: 160px;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: $white;
+  display: block;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.dropdown-content a:hover {
+  background-color: $azul;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+
+}
+
+.dropdown:hover .dropbtn {
+  background-color: $maingreen;
+}
+
+
+
+li {
+  display: inline-block;
+  font-size: 30px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 120px;
+  text-align: center;
+}
+
+.navbar {
+  background-color: $lightgrey;
+  color: $lightgreen;
+  font-size: 30px;
+  text-align: center;
+}
