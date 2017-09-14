@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>dongle</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,9 +12,86 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
+
       <header>
-        <h1>Example</h1>
-      </header>
+
+        <h1>Dongle</h1>
+
+    <div class="dropdown button">
+    <button class="dropbtn">sign Up</button>
+    <div class="dropdown-content">
+      <form id="sign-up">
+        <input type="text" name="credentials[email]" value="" placeholder="email">
+        <input type="password" name="credentials[password]" value="" placeholder="password">
+        <input type="password" name="credentials[password_confirmation]" value="" placeholder="pass confirmation">
+        <input type="submit" name="submit" value="Sign up!" class="submit">
+    </form>
+
+    </div>
+  </div>
+
+  <div class="dropdown button">
+     <button class="dropbtn">Log In</button>
+     <div class="dropdown-content">
+       <form id="sign-in">
+           <input type="text" name="credentials[email]" value="" placeholder="Email">
+           <input type="password" name="credentials[password]" value="" placeholder="Password">
+           <input type="submit" name="submit" value="Sign in!" class="submit">
+       </form>
+     </div>
+   </div>
+ </div>
+
+ <div class="dropdown ">
+<button class="dropbtn">Settings</button>
+<div class="dropdown-content">
+<a href="#">Link 1</a>
+<a href="#">Link 2</a>
+<a href="#">Delete appoitment</a>
+<div class="dropdown">
+<button class="dropbtn">changePassword</button>
+<div class="dropdown-content">
+<form id="change-password">
+    <input type="password" name="credentials[old]" value="" placeholder="Old Password">
+    <input type="password" name="credentials[new]" value="" placeholder="New Password">
+    <input type="submit" name="submit" value="Change Password" class="submit">
+</form>
+<form id="sign-out">
+    <input type="submit" name="submit" value="Sign out!" class="submit">
+</form>
+</div>
+</div>
+</div>
+</div>
+
+
+  </header>
+
+  <div class="navbar">
+    <ul>
+      <div class="dropdown">
+      <li><a href="#posts">Posts</a></li>
+      <div class="dropdown-content">
+      <a href="#">All posts</a>
+      <a href="#">My posts</a>
+      </div>
+      </div>
+      <li><a href="#pages">Pages</a></li>
+
+      <div class="dropdown">
+      <li><a href="#create">Create</a></li>
+      <div class="dropdown-content">
+      <a href="#">Posts</a>
+      <a href="#">Pages</a>
+      <a href="#">Blogs</a>
+      </div>
+    </div>
+      <li><a href="#about">About</a></li>
+    </ul>
+
+  </div>
+
+
 
     </body>
 </html>
