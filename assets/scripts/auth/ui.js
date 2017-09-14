@@ -1,6 +1,6 @@
 'use strict'
-const app = require('./app.js')
-// const events = require('./events.js')
+const app = require('../app.js')
+const events = require('./events.js')
 
 const signUpSuccess = (data) => {
   console.log(data)
@@ -12,7 +12,9 @@ const signUpFailure = (error) => {
 }
 
 const signInSuccess = (data) => {
-  console.log(app.user.token)
+  app.user = data.user
+  console.log('signed in!')
+  console.log(app.user)
 }
 
 const signInFailure = (error) => {
