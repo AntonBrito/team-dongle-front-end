@@ -17,31 +17,6 @@
 
         <h1>Dongle</h1>
 
-    <div class="dropdown button">
-    <button class="dropbtn">sign Up</button>
-    <div class="dropdown-content">
-      <form id="sign-up">
-        <input type="text" name="credentials[email]" value="" placeholder="email">
-        <input type="password" name="credentials[password]" value="" placeholder="password">
-        <input type="password" name="credentials[password_confirmation]" value="" placeholder="pass confirmation">
-        <input type="submit" name="submit" value="Sign up!" class="submit">
-    </form>
-
-    </div>
-  </div>
-
-  <div class="dropdown button">
-     <button class="dropbtn">Log In</button>
-     <div class="dropdown-content">
-       <form id="sign-in">
-           <input type="text" name="credentials[email]" value="" placeholder="Email">
-           <input type="password" name="credentials[password]" value="" placeholder="Password">
-           <input type="submit" name="submit" value="Sign in!" class="submit">
-       </form>
-     </div>
-   </div>
- </div>
-
  <div class="dropdown ">
 <button class="dropbtn">Settings</button>
 <div class="dropdown-content">
@@ -90,6 +65,38 @@
     </ul>
 
   </div>
+
+
+  <div>
+         <form id="sign-up">
+           <fieldset>
+             <legend>Sign Up Below</legend>
+             <input type="text" name="credentials[email]" placeholder="Email">
+             <input type="password" name="credentials[password]" placeholder="Create Password">
+             <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+             <input type="submit" class="btn-default" name="submit" value="Sign Up!">
+           </fieldset>
+         </form>
+       </div>
+
+       <div>
+         <form id="sign-in">
+           <fieldset>
+             <legend>Login Below</legend>
+             <input type="text" name="credentials[email]" placeholder="Email">
+             <input type="password" name="credentials[password]" placeholder="Password">
+             <input type="submit" id="sign-in-button" class="btn-default" name="submit" value="Sign In!">
+           </fieldset>
+         </form>
+       </div>
+
+       <div>
+         <form class="sign-out" id="signOut">
+           <button id="sign-out" type="submit" class="btn-default" disabled> Sign Out </button>
+         </form>
+       </div>
+
+
 
 
 
