@@ -1,103 +1,106 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>dongle</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>dongle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body class="container-fluid">
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-      <header>
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
 
-        <h1>Dongle</h1>
+<body class="container-fluid">
 
- <div class="dropdown ">
-<button class="dropbtn">Settings</button>
-<div class="dropdown-content">
-<a href="#">Link 1</a>
-<a href="#">Link 2</a>
-<a href="#">Delete appoitment</a>
-<div class="dropdown">
-<button class="dropbtn">changePassword</button>
-<div class="dropdown-content">
-<form id="change-password">
-    <input type="password" name="credentials[old]" value="" placeholder="Old Password">
-    <input type="password" name="credentials[new]" value="" placeholder="New Password">
-    <input type="submit" name="submit" value="Change Password" class="submit">
-</form>
-<form id="sign-out">
-    <input type="submit" name="submit" value="Sign out!" class="submit">
-</form>
-</div>
-</div>
-</div>
-</div>
+  <header>
 
+    <h1>Dongle</h1>
+
+    <div class="dropdown ">
+      <button class="dropbtn">Settings</button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Delete appoitment</a>
+        <div class="dropdown">
+          <button class="dropbtn">changePassword</button>
+          <div class="dropdown-content">
+            <form id="change-password">
+              <input type="password" name="credentials[old]" value="" placeholder="Old Password">
+              <input type="password" name="credentials[new]" value="" placeholder="New Password">
+              <input type="submit" name="submit" value="Change Password" class="submit">
+            </form>
+            <form id="sign-out">
+              <input type="submit" name="submit" value="Sign out!" class="submit">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </header>
 
   <div class="navbar">
     <ul>
       <div class="dropdown">
-      <li><a href="#posts">Posts</a></li>
-      <div class="dropdown-content">
-      <a href="#">All posts</a>
-      <a href="#">My posts</a>
-      </div>
+        <li><a href="#posts">Posts</a></li>
+        <div class="dropdown-content">
+          <a href="#">All posts</a>
+          <a href="#">My posts</a>
+        </div>
       </div>
       <li><a href="#pages">Pages</a></li>
 
       <div class="dropdown">
-      <li><a href="#create">Create</a></li>
-      <div class="dropdown-content">
-      <a href="#">Posts</a>
-      <a href="#">Pages</a>
-      <a href="#">Blogs</a>
+        <li><a href="#create">Create</a></li>
+        <div class="dropdown-content">
+          <a href="#">Posts</a>
+          <a href="#">Pages</a>
+          <a href="#">Blogs</a>
+        </div>
       </div>
-    </div>
       <li><a href="#about">About</a></li>
     </ul>
 
   </div>
 
-
   <div class="signfor">
-         <form id="sign-up" class="sign-up">
-           <fieldset>
-             <legend>Sign Up Below</legend>
-             <input type="text" name="credentials[email]" placeholder="Email">
-             <input type="password" name="credentials[password]" placeholder="Create Password">
-             <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-             <input type="submit" class="btn-default" name="submit" value="Sign Up!">
-           </fieldset>
-         </form>
-       </div>
+    <form id="sign-up" class="sign-up">
+      <fieldset>
+        <legend>Sign Up Below</legend>
+        <input type="text" name="credentials[email]" placeholder="Email">
+        <input type="password" name="credentials[password]" placeholder="Create Password">
+        <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+        <input type="submit" class="btn-default" name="submit" value="Sign Up!">
+      </fieldset>
+    </form>
+  </div>
 
+  <form id="sign-in" class="sign-in">
+    <fieldset>
+      <legend>Login Below</legend>
+      <input type="text" name="credentials[email]" placeholder="Email">
+      <input type="password" name="credentials[password]" placeholder="Password">
+      <input type="submit" id="sign-in-button" class="btn-default" name="submit" value="Sign In!">
+    </fieldset>
+  </form>
 
-         <form id="sign-in" class="sign-in">
-           <fieldset>
-             <legend>Login Below</legend>
-             <input type="text" name="credentials[email]" placeholder="Email">
-             <input type="password" name="credentials[password]" placeholder="Password">
-             <input type="submit" id="sign-in-button" class="btn-default" name="submit" value="Sign In!">
-           </fieldset>
-         </form>
+  <div>
+    <form class="sign-out" id="signOut">
+      <button id="sign-out" type="submit" class="btn-default" disabled> Sign Out </button>
+    </form>
+  </div>
 
-       <div>
-         <form class="sign-out" id="signOut">
-           <button id="sign-out" type="submit" class="btn-default" disabled> Sign Out </button>
-         </form>
-       </div>
+  <script id="handlebars-post" type="text/x-handlebars-template">
+    <div id="posts" class="posts">
+      <h3>My Title is {{title}}</h3>
+      <p>My Content is {{content}}</p>
+    </div>
+  </script>
 
+</body>
 
-
-
-
-    </body>
 </html>
