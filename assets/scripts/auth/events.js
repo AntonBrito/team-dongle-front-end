@@ -40,9 +40,17 @@ const onChangePassword = function (event) {
     .catch(ui.changePasswordfailure)
 }
 
+const onGetAllPosts = function (event) {
+  event.preventDefault()
+  api.getAllPosts()
+    .then(ui.getAllPostsSuccess)
+    .catch(ui.getAllPostsFailure)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onSignOut,
-  onChangePassword
+  onChangePassword,
+  onGetAllPosts
 }
