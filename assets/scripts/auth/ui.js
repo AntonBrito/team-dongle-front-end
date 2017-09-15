@@ -1,5 +1,6 @@
 'use strict'
 const app = require('../app.js')
+const template = require('../handlebars-data')
 // const events = require('./events.js')
 
 const signUpSuccess = (data) => {
@@ -45,10 +46,17 @@ const logOutFailure = (error) => {
 const getAllPostsSuccess = (data) => {
   console.log(data)
   console.log('Successfully retrieved all posts by all users')
+  $('#post-div').empty()
+  for (let i = 0; i < data.posts.length; i++) {
+    const title = data.posts[i].title
+    const body = data.posts[i].body
+    template.postsHandlebars(title, body)
+  }
 }
 const getAllPostsFailure = (err) => {
   console.log(err)
   console.log('Failed retieving all posts by all users')
+  $('#post-div').html('These Are Not The Posts You Are Looking For')
 }
 
 module.exports = {
