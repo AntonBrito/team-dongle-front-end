@@ -15,6 +15,8 @@ $(() => {
   $('#sign-in').on('submit', events.onSignIn)
   $('#sign-out').on('submit', events.onSignOut)
   $('#changePassword').on('submit', events.onChangePassword)
+  $('#allposts').on('click', events.onGetAllPosts)
+  $('#myposts').on('click', events.onGetMyPosts)
 })
 // use require without a reference to ensure a file is bundled
 // require('./example')

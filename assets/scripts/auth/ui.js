@@ -13,6 +13,10 @@ const signUpFailure = (error) => {
 
 const signInSuccess = (data) => {
   app.user = data.user
+  const titles = app.user.pages.title
+  for (let i = 0; i < titles.length; i++) {
+    $('#pages-dropdown').append(titles[i])
+  }
   console.log('signed in!')
   console.log(app.user)
 }
