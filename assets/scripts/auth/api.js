@@ -49,10 +49,18 @@ const signOut = (data) => {
   })
 }
 
+const getAllPosts = () => {
+  return $.ajax({
+    url: app.host + '/posts',
+    method: 'GET'
+  })
+}
+
 module.exports = {
   signIn,
   signUp,
   changePassword,
   signOut,
-  getFormFields
+  getFormFields,
+  getAllPosts
 }

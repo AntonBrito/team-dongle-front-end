@@ -38,6 +38,14 @@ const logOutFailure = (error) => {
   console.log(error)
   console.log('Failed')
 }
+const getAllPostsSuccess = (data) => {
+  console.log(data)
+  console.log('Successfully retrieved all posts by all users')
+}
+const getAllPostsFailure = (err) => {
+  console.log(err)
+  console.log('Failed retieving all posts by all users')
+}
 
 module.exports = {
   signUpFailure,
@@ -47,5 +55,7 @@ module.exports = {
   changePasswordfailure,
   changePasswordSuccess,
   logOutFailure,
-  logOutSuccess
+  logOutSuccess,
+  getAllPostsSuccess,
+  getAllPostsFailure
 }
