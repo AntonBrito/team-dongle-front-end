@@ -2,12 +2,11 @@
 <html>
 
 <head>
-  <title>dongle</title>
+  <title>Team Dongle</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Do not add `link` tags-->
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
   <!-- Do not add `script` tags-->
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
@@ -68,73 +67,69 @@
   </div>
 
   <div class="signfor">
-         <form id="sign-up" class="sign-up">
-           <fieldset>
-             <legend>Sign Up Below</legend>
-             <input type="text" name="credentials[email]" placeholder="Email">
-             <input type="password" name="credentials[password]" placeholder="Create Password">
-             <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-             <input type="submit" class="btn-default" name="submit" value="Sign Up!">
-           </fieldset>
-         </form>
-       </div>
+    <form id="sign-up" class="sign-up">
+      <fieldset>
+        <legend>Sign Up Below</legend>
+        <input type="text" name="credentials[email]" placeholder="Email">
+        <input type="password" name="credentials[password]" placeholder="Create Password">
+        <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+        <input type="submit" class="btn-default" name="submit" value="Sign Up!">
+      </fieldset>
+    </form>
+  </div>
 
-       <div class="signform">
-         <form id="sign-in" class="sign-in">
-           <fieldset>
-             <legend>Login Below</legend>
-             <input type="text" name="credentials[email]" placeholder="Email">
-             <input type="password" name="credentials[password]" placeholder="Password">
-             <input type="submit" id="sign-in-button" class="btn-default" name="submit" value="Sign In!">
-           </fieldset>
-         </form>
+  <div class="signform">
+    <form id="sign-in" class="sign-in">
+      <fieldset>
+        <legend>Login Below</legend>
+        <input type="text" name="credentials[email]" placeholder="Email">
+        <input type="password" name="credentials[password]" placeholder="Password">
+        <input type="submit" id="sign-in-button" class="btn-default" name="submit" value="Sign In!">
+      </fieldset>
+    </form>
 
-       <div>
-         <form class="sign-out" id="signOut">
-           <button id="sign-out" type="submit" class="btn-default" disabled> Sign Out </button>
-         </form>
-       </div>
-     </div>
+    <div>
+      <form class="sign-out" id="signOut">
+        <button id="sign-out" type="submit" class="btn-default" disabled> Sign Out </button>
+      </form>
+    </div>
+  </div>
 
-     <div id="posts_page" class="Posts_page">
-   <button id="allposts" type="submit" class="allposts btn-default">All Posts </button>
-   <button id="myposts myPosts" type="submit" class="myposts btn-default">My Posts </button>
- <div class="empty">
-   <h3></h3>
-   <p></p>
- </div>
- </div>
+  <div id="posts_page" class="posts_page">
+    <button id="allposts" type="submit" class="allposts btn-default">All Posts</button>
+    <button id="myposts" type="submit" class="myposts btn-default">My Posts</button>
+    <div id="post-div">
+    </div>
+  </div>
 
- <div id="pages_page" class="pages_page">
-   <div class="empty">
-     <h1></h1>
-     <p></p>
- </div>
-</div>
+  <div id="pages_page" class="pages_page">
+    <script id="handlebars-pages" type="text/x-handlebars-template">
+      <div id="pages-content">
+        <h1>{{title}}</h1>
+        <h3>{{heading}}</h3>
+        <p>{{body}}</p>
+        <h3>{{footer}}</h3>
+      </div>
+    </script>
+  </div>
 
-<div id="create_posts" class="create_posts">
- <form id="create-posts" class="create-posts">
-   <fieldset>
-     <legend>Create New Posts</legend>
-     <input>{{Title}}</input>
-     <input>{{content}}</input>
-   </fieldset>
- </form>
+  <div id="create_posts" class="create_posts">
+    <form id="create-posts" class="create-posts">
+      <fieldset>
+        <legend>Create New Posts</legend>
+        <h3>{{Title}}</h3>
+        <p>{{content}}</p>
+      </fieldset>
+    </form>
 
- <div id="create_pages" class="create_pages">
-   <form id="create_pages" class="create_pages">
-     <fieldset>
-       <legend>Create New Pages</legend>
-       <input>{{Title}}</input>
-       <input>{{content}}</input>
-     </fieldset>
-   </form>
- </div>
-
-     <div class="">
-      <h1></h1>
-      <p></p>
-      <p></p>
+    <div id="create_pages" class="create_pages">
+      <form id="create_pages" class="create_pages">
+        <fieldset>
+          <legend>Create New Pages</legend>
+          <h2>{{Title}}</h2>
+          <p>{{content}}</p>
+        </fieldset>
+      </form>
     </div>
 
 </html>
