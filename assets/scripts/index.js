@@ -3,6 +3,7 @@
 const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
 const events = require('./auth/events.js')
+const handlebars = require('./handlebars-data')
 $(() => {
   setAPIOrigin(location, config)
 })
