@@ -1,28 +1,26 @@
-// const Handlebars = require('handlebars')
-//
 // Retrieve the template data from the HTML .
-const postTemplate = $('#handlebars-posts').html()
-const postsContext = { 'title': "I'm a Title!", 'body': 'I HAVE BODY' }
-// Compile the template data into a function
-const templateScriptPosts = Handlebars.compile(postTemplate)
+const postHandlebarsTemplate = require('./templates/posts-template.handlebars')
+$(() => {
+  const postsContext = {
+    'title': "I'm a Title!",
+    'body': 'I HAVE BODY'
+  }
+  const postTemplate = postHandlebarsTemplate(postsContext)
+  console.log(postTemplate)
 
-const postsHtml = templateScriptPosts(postsContext)
-
-$('#posts-content').append(postsHtml)
-
+  $('#post-div').append(postTemplate)
+})
 // ///////////////////////////
 
 // Retrieve the template data from the HTML .
-const pagesTemplate = $('#handlebars-pages').html()
-const pagesContext = {
-  'title': "I'm a Title!",
-  'heading': 'Look! I am a Header',
-  'body': 'I have body',
-  'footer': 'FEET'
-}
-// Compile the template data into a function
-const templateScriptPages = Handlebars.compile(pagesTemplate)
-
-const html = templateScriptPages(pagesContext)
-
-$('#pages-content').append(html)
+// const pagesTemplate = $('#handlebars-pages').html()
+// const pagesContext = {
+//   'title': "I'm a Title!",
+//   'heading': 'Look! I am a Header',
+//   'body': 'I have body',
+//   'footer': 'FEET'
+// }
+//
+// const html = templateScriptPages(pagesContext)
+//
+// $('#pages-content').append(html)
