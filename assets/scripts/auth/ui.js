@@ -1,6 +1,6 @@
 'use strict'
 const app = require('../app.js')
-const events = require('./events.js')
+// const events = require('./events.js')
 
 const signUpSuccess = (data) => {
   console.log(data)
