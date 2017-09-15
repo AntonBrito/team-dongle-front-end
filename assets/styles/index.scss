@@ -26,7 +26,33 @@ header {
   font-size: 20px;
 }
 
+.signform {
+  text-align: center;
+}
+
 .signfor {
+  text-align: center;
+}
+
+// This is a main div for allposts and myposts button
+.posts_page {
+  text-align: center;
+  word-spacing: 15px;
+}
+
+// This is allposts button
+.allposts {
+  font-size: 25px;
+}
+
+// This is myposts button
+.myposts {
+  font-size: 25px;
+}
+
+// This is page_page content
+.pages_page {
+  font-size: 15px;
   text-align: center;
 }
 
