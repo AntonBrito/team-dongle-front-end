@@ -14,12 +14,12 @@ const signUpFailure = (error) => {
 
 const signInSuccess = (data) => {
   app.user = data.user
+  console.log('signed in!')
+  console.log(app.user)
   const titles = app.user.pages.title
   for (let i = 0; i < titles.length; i++) {
     $('#pages-dropdown').append(titles[i])
   }
-  console.log('signed in!')
-  console.log(app.user)
 }
 
 const signInFailure = (error) => {
@@ -59,6 +59,46 @@ const getAllPostsFailure = (err) => {
   $('#post-div').html('These Are Not The Posts You Are Looking For')
 }
 
+const getAllMySuccess = (data) => {
+  console.log(data)
+  console.log('Succeded')
+}
+
+const getAllMyPostsFailure = (error) => {
+  console.log(error)
+  console.log('Failed')
+}
+
+const getAllPagesSuccess = (data) => {
+  console.log(data)
+  console.log('Succeded')
+}
+
+const getAllPagesFailure = (error) => {
+  console.log(error)
+  console.log('Failed')
+}
+
+const getAllMyPagesSuccess = (data) => {
+  console.log(data)
+  console.log('Succeded')
+}
+
+const getAllMyPagesFailure = (error) => {
+  console.log(error)
+  console.log('Failed')
+}
+
+const createPageSuccess = (data) => {
+  console.log(data)
+  console.log('Succeded')
+}
+
+const createPageFailure = (error) => {
+  console.log(error)
+  console.log('Failed')
+}
+
 module.exports = {
   signUpFailure,
   signUpSuccess,
@@ -69,5 +109,13 @@ module.exports = {
   logOutFailure,
   logOutSuccess,
   getAllPostsSuccess,
-  getAllPostsFailure
+  getAllPostsFailure,
+  getAllMyPostsSuccess,
+  getAllMyPostsFailure,
+  getAllPagesSuccess,
+  getAllPagesFailure,
+  getAllMyPagesSuccess,
+  getAllMyPagesFailure,
+  createPageSuccess,
+  createPageFailure
 }
