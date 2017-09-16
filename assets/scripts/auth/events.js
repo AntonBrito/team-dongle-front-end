@@ -22,6 +22,13 @@ const onGetAllMyPages = function (event) {
     .catch(ui.getAllMyPagesFailure)
 }
 
+const onGetOnePage = function (event) {
+  const data = getFormFields(this)
+  api.getOnePage(data)
+    .then(ui.getOnePageSuccess)
+    .catch(ui.getOnePageFailure)
+}
+
 const onSignIn = function (event) {
   console.log('I did something in onSignIn!')
   const data = getFormFields(this)
@@ -104,5 +111,6 @@ module.exports = {
   onEditPost,
   onGetAllPages,
   onGetAllMyPages,
-  onCreatePage
+  onCreatePage,
+  onGetOnePage
 }

@@ -108,6 +108,17 @@ const getAllMyPages = () => {
   })
 }
 
+const getOnePage = (data) => {
+  console.log(data)
+  return $.ajax({
+    url: app.host + '/pages/' + data.pages.id,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
 const createPage = (data) => {
   return $.ajax({
     url: app.host + '/pages',
@@ -140,6 +151,7 @@ module.exports = {
   editPost,
   getAllPages,
   getAllMyPages,
-  createPage
+  createPage,
+  getOnePage
 
 }

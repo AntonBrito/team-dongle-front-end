@@ -82,8 +82,16 @@ const getAllMyPostsFailure = (error) => {
 }
 
 const getAllPagesSuccess = (data) => {
-  console.log(data)
+  app.pages = data.pages
+  console.log(app.pages)
   console.log('Succeded in getAllPagesSuccess')
+}
+
+const getOnePageSuccess = (data) => {
+  console.log('succeeded in getOnePageSuccess')
+  // assign for edit or delete
+  app.page = data.page
+  console.log(app.page)
 }
 
 const getAllPagesFailure = (error) => {
@@ -97,6 +105,7 @@ const getAllMyPagesSuccess = (data) => {
   console.log('Succeded')
   $('#listOfPages').empty()
   for (let i = 0; i < data.pages.length; i++) {
+    app.pages[i].id = data.pages[i].id
     const title = data.pages[i].title
     template.dropdownHandlebars(title)
   }
@@ -132,6 +141,7 @@ module.exports = {
   getAllMyPostsFailure,
   getAllPagesSuccess,
   getAllPagesFailure,
+  getOnePageSuccess,
   getAllMyPagesSuccess,
   getAllMyPagesFailure,
   createPageSuccess,
