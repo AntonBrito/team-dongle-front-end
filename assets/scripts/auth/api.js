@@ -109,7 +109,16 @@ const createPage = (data) => {
   return $.ajax({
     url: app.host + '/pages',
     method: 'POST',
-    data,
+    data: {
+      'page': {
+        'title': data.title,
+        'sections': {
+          'heading': data.heading,
+          'body': data.body,
+          'footer': data.footer
+        }
+      }
+    },
     headers: {
       Authorization: 'Token token=' + app.user.token
     }

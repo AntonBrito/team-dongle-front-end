@@ -77,8 +77,9 @@ const onGetAllMyPages = function (event) {
 }
 
 const onCreatePage = function (event) {
+  const data = getFormFields(this)
   event.preventDefault()
-  api.createPage()
+  api.createPage(data)
     .then(ui.createPageSuccess)
     .catch(ui.createPageFailure)
 }
