@@ -15,7 +15,7 @@ const onSignUp = function (event) {
     .catch(ui.signUpFailure)
 }
 
-const onGetAllMyPages = function (event) {
+const onGetAllMyPages = function () {
   // event.preventDefault()
   api.getAllMyPages()
     .then(ui.getAllMyPagesSuccess)
