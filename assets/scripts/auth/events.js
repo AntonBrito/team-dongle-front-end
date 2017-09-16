@@ -54,6 +54,14 @@ const onGetAllMyPosts = function (event) {
     .catch(ui.getAllMyPostsFailure)
 }
 
+const onCreatePost = function (event) {
+  const data = getFormFields(this)
+  event.preventDefault()
+  api.createPost(data)
+    .then(ui.createPostSuccess)
+    .catch(ui.createPostFailure)
+}
+
 const onGetAllPages = function (event) {
   event.preventDefault()
   api.getAllPages()
@@ -82,6 +90,7 @@ module.exports = {
   onChangePassword,
   onGetAllPosts,
   onGetAllMyPosts,
+  onCreatePost,
   onGetAllPages,
   onGetAllMyPages,
   onCreatePage
