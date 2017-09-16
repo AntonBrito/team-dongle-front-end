@@ -21,5 +21,7 @@ $(() => {
   $('#pages_title').on('submit', events.onCreatePage)
   $('#random').on('click', events.onGetAllMyPages)
 })
+const pageList = document.getElementsByClassName("#pages-dropdown")
+$(document).on('click', pageList, events.onGetOnePage)
 // use require without a reference to ensure a file is bundled
 // require('./example')
