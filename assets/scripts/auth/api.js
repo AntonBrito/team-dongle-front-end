@@ -82,7 +82,10 @@ const createPost = (data) => {
   })
 }
 
+// TODO get ID of post to be updated
+// TODO finish this ajax request
 const editPost = (data) => {
+  console.log(data)
   return $.ajax({
     url: app.host + 'posts/'
   })
@@ -98,6 +101,17 @@ const getAllPages = () => {
 const getAllMyPages = () => {
   return $.ajax({
     url: app.host + '/pages/' + app.user.id + '/my_pages',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
+const getOnePage = (data) => {
+  console.log(data)
+  return $.ajax({
+    url: app.host + '/pages/' + data.pages.id,
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + app.user.token
@@ -134,8 +148,10 @@ module.exports = {
   getAllPosts,
   getAllMyPosts,
   createPost,
+  editPost,
   getAllPages,
   getAllMyPages,
-  createPage
+  createPage,
+  getOnePage
 
 }

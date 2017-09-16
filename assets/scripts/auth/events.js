@@ -22,6 +22,13 @@ const onGetAllMyPages = function (event) {
     .catch(ui.getAllMyPagesFailure)
 }
 
+const onGetOnePage = function (event) {
+  const data = getFormFields(this)
+  api.getOnePage(data)
+    .then(ui.getOnePageSuccess)
+    .catch(ui.getOnePageFailure)
+}
+
 const onSignIn = function (event) {
   console.log('I did something in onSignIn!')
   const data = getFormFields(this)
@@ -70,6 +77,14 @@ const onCreatePost = function (event) {
     .catch(ui.createPostFailure)
 }
 
+const onEditPost = function (event) {
+  const data = getFormFields(this)
+  event.preventDefault()
+  api.editPost(data)
+    .then(ui.onEditPostSuccess)
+    .catch(ui.onEditPostFailure)
+}
+
 const onGetAllPages = function (event) {
   event.preventDefault()
   api.getAllPages()
@@ -93,7 +108,9 @@ module.exports = {
   onGetAllPosts,
   onGetAllMyPosts,
   onCreatePost,
+  onEditPost,
   onGetAllPages,
   onGetAllMyPages,
-  onCreatePage
+  onCreatePage,
+  onGetOnePage
 }
