@@ -56,11 +56,27 @@ const getAllPosts = () => {
   })
 }
 
+const getAllPages = () => {
+  return $.ajax({
+    url: app.host + '/pages',
+    method: 'GET'
+  })
+}
+
+const getAllMyPosts = () => {
+  return $.ajax({
+    url: app.host + '/posts/' + app.user.id + '/my_posts',
+    method: 'GET'
+  })
+}
+
 module.exports = {
   signIn,
   signUp,
   changePassword,
   signOut,
   getFormFields,
-  getAllPosts
+  getAllPosts,
+  getAllPages,
+  getAllMyPosts
 }
