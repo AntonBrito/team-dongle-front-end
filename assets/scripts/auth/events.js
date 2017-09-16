@@ -15,12 +15,20 @@ const onSignUp = function (event) {
     .catch(ui.signUpFailure)
 }
 
+const onGetAllMyPages = function (event) {
+  // event.preventDefault()
+  api.getAllMyPages()
+    .then(ui.getAllMyPagesSuccess)
+    .catch(ui.getAllMyPagesFailure)
+}
+
 const onSignIn = function (event) {
   console.log('I did something in onSignIn!')
   const data = getFormFields(this)
   event.preventDefault()
   api.signIn(data)
     .then(ui.signInSuccess)
+    .then(onGetAllMyPages)
     .catch(ui.signInFailure)
 }
 
@@ -67,13 +75,6 @@ const onGetAllPages = function (event) {
   api.getAllPages()
     .then(ui.getAllPagesSuccess)
     .catch(ui.getAllPagesFailure)
-}
-
-const onGetAllMyPages = function (event) {
-  event.preventDefault()
-  api.getAllMyPages()
-    .then(ui.getAllMyPagesSuccess)
-    .catch(ui.getAllMyPagesFailure)
 }
 
 const onCreatePage = function (event) {
