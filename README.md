@@ -12,7 +12,7 @@ FInally!
 
 Tony after testing gits, final testing
 
-trying to fix this
+Lets get this working!
 
 ## [License](LICENSE)
 
