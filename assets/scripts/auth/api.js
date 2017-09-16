@@ -56,11 +56,54 @@ const getAllPosts = () => {
   })
 }
 
+const getAllMyPosts = () => {
+  return $.ajax({
+    url: app.host + '/posts/' + app.user.id + '/my_posts',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
+const getAllPages = () => {
+  return $.ajax({
+    url: app.host + '/pages',
+    method: 'GET'
+  })
+}
+
+const getAllMyPages = () => {
+  return $.ajax({
+    url: app.host + '/pages/' + app.user.id + '/my_pages',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
+const createPage = (data) => {
+  return $.ajax({
+    url: app.host + '/pages',
+    method: 'POST',
+    data,
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
 module.exports = {
   signIn,
   signUp,
   changePassword,
   signOut,
   getFormFields,
-  getAllPosts
+  getAllPosts,
+  getAllMyPosts,
+  getAllPages,
+  getAllMyPages,
+  createPage
+
 }
