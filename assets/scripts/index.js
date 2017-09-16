@@ -22,6 +22,6 @@ $(() => {
   $('#random').on('click', events.onGetAllMyPages)
 })
 const pageList = document.getElementsByClassName("#pages-dropdown")
-$(document).on('click', pageList, events.onGetOnePage)
+$(pageList).on('click', events.onGetOnePage)
 // use require without a reference to ensure a file is bundled
 // require('./example')
