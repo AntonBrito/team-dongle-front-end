@@ -70,7 +70,12 @@ const createPost = (data) => {
   return $.ajax({
     url: app.host + '/posts',
     method: 'POST',
-    data,
+    data: {
+      'post': {
+        'title': data.title,
+        'body': data.body
+      }
+    },
     headers: {
       Authorization: 'Token token=' + app.user.token
     }
