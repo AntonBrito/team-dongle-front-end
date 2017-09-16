@@ -13,7 +13,7 @@ $(() => {
 $(() => {
   $('#sign-up').on('submit', events.onSignUp)
   $('#sign-in').on('submit', events.onSignIn)
-  $('#sign-out').on('submit', events.onSignOut)
+  $('#sign-out').on('click', events.onSignOut)
   $('#changePassword').on('submit', events.onChangePassword)
   $('#allposts').on('click', events.onGetAllPosts)
   $('#myposts').on('click', events.onGetMyPosts)
