@@ -27,13 +27,13 @@ const pagesHandlebars = function () {
 // ////////////////////////////
 // template context for drpdwn/
 // ////////////////////////////
-const dropdownHandlebars = function () {
+const dropdownHandlebars = function (title) {
   const pageHandlebarsTemplate = require('./templates/pages-dropdown-list.handlebars')
   const context = {
-    'title': "I'm a Title!"
+    'title': title
   }
   const html = pageHandlebarsTemplate(context)
-  $('#pages-div').append(html)
+  $('#listOfPages').append(html)
 }
 
 module.exports = {

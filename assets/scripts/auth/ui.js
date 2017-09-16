@@ -5,25 +5,28 @@ const template = require('../handlebars-data')
 
 const signUpSuccess = (data) => {
   console.log(data)
+  console.log('signed up Successfully')
   // console.log('I did something in ui.js!')
 }
 
 const signUpFailure = (error) => {
   console.log(error)
+  console.log('failed to signUp')
 }
 
 const signInSuccess = (data) => {
   app.user = data.user
   console.log('signed in!')
   console.log(app.user)
-  const titles = app.user.pages.title
-  for (let i = 0; i < titles.length; i++) {
-    $('#pages-dropdown').append(titles[i])
-  }
+  // const titles = app.user.pages.title
+  // for (let i = 0; i < titles.length; i++) {
+  //   $('#pages-dropdown').append(titles[i])
+  // }
 }
 
 const signInFailure = (error) => {
   console.log(error)
+  console.log('failure in signInFailure')
 }
 
 const changePasswordSuccess = (data) => {
@@ -36,12 +39,12 @@ const changePasswordfailure = (error) => {
 
 const logOutSuccess = (data) => {
   console.log(data)
-  console.log('Succeded')
+  console.log('Succeded in logOutSuccess')
 }
 
 const logOutFailure = (error) => {
   console.log(error)
-  console.log('Failed')
+  console.log('Failed in logOutFailure')
 }
 const getAllPostsSuccess = (data) => {
   console.log(data)
@@ -80,32 +83,38 @@ const getAllMyPostsFailure = (error) => {
 
 const getAllPagesSuccess = (data) => {
   console.log(data)
-  console.log('Succeded')
+  console.log('Succeded in getAllPagesSuccess')
 }
 
 const getAllPagesFailure = (error) => {
   console.log(error)
-  console.log('Failed')
+  console.log('Failed in getAllPagesFailure')
 }
 
 const getAllMyPagesSuccess = (data) => {
+  console.log('I am getAllMyPagesSuccess')
   console.log(data)
   console.log('Succeded')
+  $('#listOfPages').empty()
+  for (let i = 0; i < data.pages.length; i++) {
+    const title = data.pages[i].title
+    template.dropdownHandlebars(title)
+  }
 }
 
 const getAllMyPagesFailure = (error) => {
   console.log(error)
-  console.log('Failed')
+  console.log('Failed in getAllMyPagesFailure')
 }
 
 const createPageSuccess = (data) => {
   console.log(data)
-  console.log('Succeded')
+  console.log('Succeded in createPageSuccess')
 }
 
 const createPageFailure = (error) => {
   console.log(error)
-  console.log('Failed')
+  console.log('Failed in createPageFailure')
 }
 
 module.exports = {
