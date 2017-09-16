@@ -66,6 +66,23 @@ const getAllMyPosts = () => {
   })
 }
 
+const createPost = (data) => {
+  return $.ajax({
+    url: app.host + '/posts',
+    method: 'POST',
+    data,
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
+const editPost = (data) => {
+  return $.ajax({
+    url: app.host + 'posts/'
+  })
+}
+
 const getAllPages = () => {
   return $.ajax({
     url: app.host + '/pages',
@@ -102,6 +119,7 @@ module.exports = {
   getFormFields,
   getAllPosts,
   getAllMyPosts,
+  createPost,
   getAllPages,
   getAllMyPages,
   createPage
