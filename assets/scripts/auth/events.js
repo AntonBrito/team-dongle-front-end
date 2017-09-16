@@ -47,10 +47,26 @@ const onGetAllPosts = function (event) {
     .catch(ui.getAllPostsFailure)
 }
 
+const onGetAllPages = function (event) {
+  event.preventDefault()
+  api.getAllPages()
+    .then(ui.getAllPagesSuccess)
+    .catch(ui.getAllPagesFailure)
+}
+
+const onGetAllMyPosts = function (event) {
+  event.preventDefault()
+  api.getAllMyPosts()
+    .then(ui.getAllMyPostsSuccess)
+    .catch(ui.getAllMyPostsFailure)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onSignOut,
   onChangePassword,
-  onGetAllPosts
+  onGetAllPosts,
+  onGetAllPages,
+  onGetAllMyPosts
 }
