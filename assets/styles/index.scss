@@ -3,7 +3,11 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~./custom';
 
 header {
-  background-color: $azul;
+  background-color: $maingreen;
+}
+
+body {
+  background-color: $lightcream;
 }
 
 .dropbtn {
@@ -107,4 +111,46 @@ h1 {
   font-size: 30px;
   text-align: center;
   word-spacing: 40px;
+}
+
+.create {
+  text-align: center;
+}
+
+.posts-title {
+  font-size: 20px;
+  width: 20%;
+}
+
+.pages-title {
+  font-size: 20px;
+  width: 20%;
+ }
+
+.pages-header {
+  font-size: 17px;
+  width: 30%
+ }
+
+.pages-footer {
+  font-size: 15px;
+  height: 50px;
+  width: 40%;
+ }
+
+.textbox {
+  border: 5px solid $maingreen;
+  border-radius: 20px;
+  box-sizing: border-box;
+  font-size: 15px;
+  height: 350px;
+  width: 40%;
+}
+
+footer {
+  background-color: $maingreen;
+  box-sizing: border-box;
+  font-size: 15px;
+  height: 50px;
+  text-align: center;
 }

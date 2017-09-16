@@ -13,10 +13,12 @@ $(() => {
 $(() => {
   $('#sign-up').on('submit', events.onSignUp)
   $('#sign-in').on('submit', events.onSignIn)
-  $('#sign-out').on('submit', events.onSignOut)
+  $('#sign-out').on('click', events.onSignOut)
   $('#changePassword').on('submit', events.onChangePassword)
   $('#allposts').on('click', events.onGetAllPosts)
-  $('#myposts').on('click', events.onGetMyPosts)
+  $('#myposts').on('click', events.onGetAllMyPosts)
+  $('#post_title').on('submit', events.onCreatePost)
+  $('#pages_title').on('submit', events.onCreatePage)
 })
 // use require without a reference to ensure a file is bundled
 // require('./example')

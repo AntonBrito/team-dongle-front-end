@@ -47,10 +47,52 @@ const onGetAllPosts = function (event) {
     .catch(ui.getAllPostsFailure)
 }
 
+const onGetAllMyPosts = function (event) {
+  event.preventDefault()
+  api.getAllMyPosts()
+    .then(ui.getAllMyPostsSuccess)
+    .catch(ui.getAllMyPostsFailure)
+}
+
+const onCreatePost = function (event) {
+  const data = getFormFields(this)
+  event.preventDefault()
+  api.createPost(data)
+    .then(ui.createPostSuccess)
+    .catch(ui.createPostFailure)
+}
+
+const onGetAllPages = function (event) {
+  event.preventDefault()
+  api.getAllPages()
+    .then(ui.getAllPagesSuccess)
+    .catch(ui.getAllPagesFailure)
+}
+
+const onGetAllMyPages = function (event) {
+  event.preventDefault()
+  api.getAllMyPages()
+    .then(ui.getAllMyPagesSuccess)
+    .catch(ui.getAllMyPagesFailure)
+}
+
+const onCreatePage = function (event) {
+  const data = getFormFields(this)
+  event.preventDefault()
+  api.createPage(data)
+    .then(ui.createPageSuccess)
+    .catch(ui.createPageFailure)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onSignOut,
   onChangePassword,
-  onGetAllPosts
+  onGetAllPosts,
+  onGetAllMyPosts,
+  onCreatePost,
+  onGetAllPages,
+  onGetAllMyPages,
+  onCreatePage
 }

@@ -56,11 +56,86 @@ const getAllPosts = () => {
   })
 }
 
+const getAllMyPosts = () => {
+  return $.ajax({
+    url: app.host + '/posts/' + app.user.id + '/my_posts',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
+const createPost = (data) => {
+  return $.ajax({
+    url: app.host + '/posts',
+    method: 'POST',
+    data: {
+      'post': {
+        'title': data.title,
+        'body': data.body
+      }
+    },
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
+const editPost = (data) => {
+  return $.ajax({
+    url: app.host + 'posts/'
+  })
+}
+
+const getAllPages = () => {
+  return $.ajax({
+    url: app.host + '/pages',
+    method: 'GET'
+  })
+}
+
+const getAllMyPages = () => {
+  return $.ajax({
+    url: app.host + '/pages/' + app.user.id + '/my_pages',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
+const createPage = (data) => {
+  return $.ajax({
+    url: app.host + '/pages',
+    method: 'POST',
+    data: {
+      'page': {
+        'title': data.title,
+        'sections': {
+          'heading': data.heading,
+          'body': data.body,
+          'footer': data.footer
+        }
+      }
+    },
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
 module.exports = {
   signIn,
   signUp,
   changePassword,
   signOut,
   getFormFields,
-  getAllPosts
+  getAllPosts,
+  getAllMyPosts,
+  createPost,
+  getAllPages,
+  getAllMyPages,
+  createPage
+
 }
