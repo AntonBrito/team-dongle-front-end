@@ -59,7 +59,7 @@ const getAllPostsFailure = (err) => {
   $('#post-div').html('These Are Not The Posts You Are Looking For')
 }
 
-const getAllMySuccess = (data) => {
+const getAllMyPostsSuccess = (data) => {
   console.log(data)
   console.log('Succeded')
 }
