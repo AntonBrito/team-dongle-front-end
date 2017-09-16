@@ -70,6 +70,14 @@ const onCreatePost = function (event) {
     .catch(ui.createPostFailure)
 }
 
+const onEditPost = function (event) {
+  const data = getFormFields(this)
+  event.preventDefault()
+  api.editPost(data)
+    .then(ui.onEditPostSuccess)
+    .catch(ui.onEditPostFailure)
+}
+
 const onGetAllPages = function (event) {
   event.preventDefault()
   api.getAllPages()
@@ -93,6 +101,7 @@ module.exports = {
   onGetAllPosts,
   onGetAllMyPosts,
   onCreatePost,
+  onEditPost,
   onGetAllPages,
   onGetAllMyPages,
   onCreatePage

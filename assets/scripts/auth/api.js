@@ -82,7 +82,10 @@ const createPost = (data) => {
   })
 }
 
+// TODO get ID of post to be updated
+// TODO finish this ajax request
 const editPost = (data) => {
+  console.log(data)
   return $.ajax({
     url: app.host + 'posts/'
   })
@@ -134,6 +137,7 @@ module.exports = {
   getAllPosts,
   getAllMyPosts,
   createPost,
+  editPost,
   getAllPages,
   getAllMyPages,
   createPage
