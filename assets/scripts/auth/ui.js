@@ -102,12 +102,15 @@ const getAllPagesFailure = (error) => {
 const getAllMyPagesSuccess = (data) => {
   console.log('I am getAllMyPagesSuccess')
   console.log(data)
+  console.log('app === ' + app.page)
   console.log('Succeded')
   $('#listOfPages').empty()
   for (let i = 0; i < data.pages.length; i++) {
-    app.pages[i].id = data.pages[i].id
+    // data-id = data.pages[i]._id
+    const dataId = data.pages[i]._id
+    console.log('dataId === ' + dataId)
     const title = data.pages[i].title
-    template.dropdownHandlebars(title)
+    template.dropdownHandlebars(title, dataId)
   }
 }
 

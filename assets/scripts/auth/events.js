@@ -92,6 +92,7 @@ const onGetAllPages = function (event) {
     .catch(ui.getAllPagesFailure)
 }
 
+// TODO add promise to call getAllMyPages
 const onCreatePage = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
