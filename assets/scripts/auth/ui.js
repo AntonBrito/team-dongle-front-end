@@ -18,10 +18,6 @@ const signInSuccess = (data) => {
   app.user = data.user
   console.log('signed in!')
   console.log(app.user)
-  // const titles = app.user.pages.title
-  // for (let i = 0; i < titles.length; i++) {
-  //   $('#pages-dropdown').append(titles[i])
-  // }
 }
 
 const signInFailure = (error) => {

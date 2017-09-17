@@ -100,6 +100,7 @@ const onCreatePage = function (event) {
   event.preventDefault()
   api.createPage(data)
     .then(ui.createPageSuccess)
+    .then(onGetAllMyPages)
     .catch(ui.createPageFailure)
 }
 
