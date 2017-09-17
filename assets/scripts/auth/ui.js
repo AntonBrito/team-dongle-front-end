@@ -20,6 +20,7 @@ const signInSuccess = (data) => {
   console.log(app.user)
   $('#signfo').hide()
   $('#message').html('You Have Signed In!')
+  $('#posts_page').hide()
 }
 
 const signInFailure = (error) => {
@@ -39,7 +40,9 @@ const logOutSuccess = (data) => {
   console.log(data)
   console.log('Succeded in logOutSuccess')
   $('#signfo').show()
+  $('#posts_page, #pages_page, #create_posts, #create_pages, #update_posts, #update_page').hide()
   $('#message').html('You Have Signed Out!')
+  $('#listOfPages').empty()
 }
 
 const logOutFailure = (error) => {
@@ -56,6 +59,7 @@ const getAllPostsSuccess = (data) => {
     const dataId = data.posts[i]._id
     template.postsHandlebars(title, body, dataId)
   }
+  $('.postsEditButton, .postsDeleteButton').hide()
 }
 const getAllPostsFailure = (err) => {
   console.log(err)
@@ -132,9 +136,21 @@ const getAllMyPagesFailure = (error) => {
 const createPageSuccess = (data) => {
   console.log(data)
   console.log('Succeded in createPageSuccess')
+  $('textarea').val('')
 }
 
 const createPageFailure = (error) => {
+  console.log(error)
+  console.log('Failed in createPageFailure')
+}
+
+const createPostSuccess = (data) => {
+  console.log(data)
+  console.log('Succeded in createPageSuccess')
+  $('textarea').val('')
+}
+
+const createPostFailure = (error) => {
   console.log(error)
   console.log('Failed in createPageFailure')
 }
@@ -214,6 +230,8 @@ module.exports = {
   getAllMyPagesFailure,
   createPageSuccess,
   createPageFailure,
+  createPostSuccess,
+  createPostFailure,
   deletePageSuccess,
   deletePageFailure,
   deletePostSuccess,
