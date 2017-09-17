@@ -63,12 +63,21 @@ const onCreatePost = function (event) {
     .catch(ui.createPostFailure)
 }
 
-const onEditPost = function (event) {
+const onUpdatePost = function (event) {
   const data = getFormFields(this)
+  const dataId = this.getAttribute('data-id')
   event.preventDefault()
-  api.editPost(data)
-    .then(ui.onEditPostSuccess)
-    .catch(ui.onEditPostFailure)
+  api.updatePost(data, dataId)
+    .then(ui.editPostSuccess)
+    .catch(ui.editPostFailure)
+}
+
+const onDeletePost = function (event) {
+  const dataId = this.getAttribute('data-id')
+  event.preventDefault()
+  api.deletePost(dataId)
+    .then(ui.deletePostSuccess)
+    .catch(ui.deletePostFailure)
 }
 
 const onGetAllPages = function (event) {
@@ -104,6 +113,15 @@ const onCreatePage = function (event) {
     .catch(ui.createPageFailure)
 }
 
+const onUpdatePage = function (event) {
+  const data = getFormFields(this)
+  const dataId = this.getAttribute('data-id')
+  event.preventDefault()
+  api.updatePage(data, dataId)
+    .then(ui.updatePageSuccess)
+    .catch(ui.updatePageFailure)
+}
+
 const onDeletePage = function (event) {
   const dataId = this.getAttribute('data-id')
   event.preventDefault()
@@ -120,10 +138,12 @@ module.exports = {
   onGetAllPosts,
   onGetAllMyPosts,
   onCreatePost,
-  onEditPost,
+  onUpdatePost,
+  onDeletePost,
   onGetAllPages,
   onGetAllMyPages,
   onCreatePage,
+  onUpdatePage,
   onGetOnePage,
   onDeletePage
 }
