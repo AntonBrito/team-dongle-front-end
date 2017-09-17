@@ -20,8 +20,9 @@ $(() => {
   $('#post_title').on('submit', events.onCreatePost)
   $('#pages_title').on('submit', events.onCreatePage)
   $('#random').on('click', events.onGetAllMyPages)
+  $('#pages-dropdown').on('click', events.onGetOnePage)
 })
-const pageList = document.getElementsByClassName("#pages-dropdown")
-$(pageList).on('click', events.onGetOnePage)
+// const pageList = document.getElementById("#pages-dropdown")
+// $(pageList).on('click', events.onGetOnePage)
 // use require without a reference to ensure a file is bundled
 // require('./example')

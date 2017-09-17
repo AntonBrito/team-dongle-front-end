@@ -23,7 +23,9 @@ const onGetAllMyPages = function () {
 }
 
 const onGetOnePage = function (event) {
+  console.log('onGetOnePage called')
   const data = getFormFields(this)
+  console.log('data = ' + data)
   api.getOnePage(data)
     .then(ui.getOnePageSuccess)
     .catch(ui.getOnePageFailure)
