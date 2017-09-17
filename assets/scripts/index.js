@@ -23,6 +23,9 @@ $(() => {
   $('#random').on('click', events.onGetAllMyPages)
   $('#update_posts_form').on('submit', events.onUpdatePost)
   $('#update_pages_form').on('submit', events.onUpdatePage)
+  $('#allposts').on('click', function () {
+    $('#posts_page').show()
+  })
   $('form').on('submit', function () {
     $('input').val('')
     $('#message').empty()
