@@ -27,11 +27,4 @@ Wireframe landing page: https://imgur.com/a/TtDmH
 Wireframe create: https://imgur.com/a/kP4Kn
 Wireframe all posts: https://imgur.com/a/BBj4g
 
-API repository: https://github.com/GA-project-3-team-dongle/cms-express-api
-
-
-## [License](LICENSE)
-
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+API repository: https://github.com/GA-project-3-team-dongle/cms-express-apigit
