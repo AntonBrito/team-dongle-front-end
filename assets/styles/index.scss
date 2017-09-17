@@ -6,6 +6,11 @@ header {
   background-color: $maingreen;
 }
 
+#pages-div {
+  border-color: $maingreen;
+  border-style: dotted;
+}
+
 body {
   background-color: $lightcream;
 }
@@ -25,8 +30,28 @@ body {
   margin-top: 0px;
 }
 
-.sign-out {
-  background-color: $azul;
+.setting {
+  background-color: $maingreen;
+}
+
+.signout-button {
+  background-color: $maingreen;
+  border-radius: 45px;
+  color: $cream;
+  font-size: 20px;
+}
+
+.signin-button {
+  background-color: $maingreen;
+  border-radius: 45px;
+  color: $cream;
+  font-size: 20px;
+}
+
+.signup-button {
+  background-color: $maingreen;
+  border-radius: 45px;
+  color: $cream;
   font-size: 20px;
 }
 
@@ -38,6 +63,38 @@ body {
   text-align: center;
 }
 
+.email-textbox {
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+  height: 30px;
+  width: 15%;
+}
+
+.pass-textbox {
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+  height: 30px;
+  width: 15%;
+}
+
+.pass-confir-textbox {
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+  height: 30px;
+  width: 15%;
+}
+
+.changepass {
+
+}
+
+.changepass1 {
+  border-radius: 10px;
+}
+
 // This is a main div for allposts and myposts button
 .posts_page {
   text-align: center;
@@ -46,12 +103,30 @@ body {
 
 // This is allposts button
 .allposts {
-  font-size: 25px;
+  background-color: $lightgrey;
+  border: 2px solid $maingreen;
+  border-radius: 20px;
+  box-sizing: border-box;
+  color: $cream;
+  font-size: 20px;
+  height: 30px;
+  width: 10%;
 }
 
 // This is myposts button
 .myposts {
-  font-size: 25px;
+  background-color: $yellow;
+  border: 2px solid $maingreen;
+  border-radius: 20px;
+  box-sizing: border-box;
+  color: $maingreen;
+  font-size: 20px;
+  height: 30px;
+  width: 10%;
+}
+
+.get-all-my-posts {
+  font-size: 20px;
 }
 
 // This is page_page content
@@ -67,7 +142,7 @@ body {
 
 .dropdown-content {
   background-color: $lightgrey;
-  // box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 20px;
   display: none;
   min-width: 160px;
   position: absolute;
@@ -94,6 +169,10 @@ body {
   background-color: $maingreen;
 }
 
+.pages-dropdown {
+  word-spacing: 2px;
+}
+
 li {
   display: inline-block;
   font-size: 30px;
@@ -106,6 +185,7 @@ h1 {
 }
 
 .navbar {
+  border-radius: 20px;
   background-color: $lightgrey;
   color: $lightgreen;
   font-size: 30px;
@@ -113,38 +193,62 @@ h1 {
   word-spacing: 40px;
 }
 
+legend {
+  font-size: 40px
+}
+
 .create {
   text-align: center;
 }
 
 .posts-title {
+  background-color: $canvas;
+  border: 2px solid $maingreen;
+  border-radius: 20px;
   font-size: 20px;
   width: 20%;
 }
 
 .pages-title {
+  background-color: $canvas;
+  border: 2px solid $maingreen;
+  border-radius: 20px;
   font-size: 20px;
   width: 20%;
  }
 
 .pages-header {
+  background-color: $canvas;
+  border: 2px solid $maingreen;
+  border-radius: 20px;
   font-size: 17px;
-  width: 30%
+  width: 30%;
  }
 
 .pages-footer {
+  background-color: $canvas;
+  border: 2px solid $maingreen;
+  border-radius: 20px;
   font-size: 15px;
   height: 50px;
   width: 40%;
  }
 
 .textbox {
+  background-color: $canvas;
   border: 5px solid $maingreen;
   border-radius: 20px;
   box-sizing: border-box;
   font-size: 15px;
   height: 350px;
   width: 40%;
+}
+
+.submit {
+  background-color: $maingreen;
+  border-radius: 45px;
+  color: $cream;
+  font-size: 20px;
 }
 
 footer {

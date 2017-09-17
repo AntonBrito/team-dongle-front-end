@@ -21,6 +21,7 @@ const onSignIn = function (event) {
   event.preventDefault()
   api.signIn(data)
     .then(ui.signInSuccess)
+    .then(onGetAllMyPages)
     .catch(ui.signInFailure)
 }
 
@@ -62,6 +63,14 @@ const onCreatePost = function (event) {
     .catch(ui.createPostFailure)
 }
 
+const onEditPost = function (event) {
+  const data = getFormFields(this)
+  event.preventDefault()
+  api.editPost(data)
+    .then(ui.onEditPostSuccess)
+    .catch(ui.onEditPostFailure)
+}
+
 const onGetAllPages = function (event) {
   event.preventDefault()
   api.getAllPages()
@@ -69,13 +78,23 @@ const onGetAllPages = function (event) {
     .catch(ui.getAllPagesFailure)
 }
 
-const onGetAllMyPages = function (event) {
-  event.preventDefault()
+const onGetAllMyPages = function () {
+  // event.preventDefault()
   api.getAllMyPages()
     .then(ui.getAllMyPagesSuccess)
     .catch(ui.getAllMyPagesFailure)
 }
 
+const onGetOnePage = function (event) {
+  console.log('onGetOnePage called')
+  const dataId = this.getAttribute('data-id')
+  console.log('dataId = ' + dataId)
+  api.getOnePage(dataId)
+    .then(ui.getOnePageSuccess)
+    .catch(ui.getOnePageFailure)
+}
+
+// TODO add promise to call getAllMyPages
 const onCreatePage = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
@@ -92,7 +111,9 @@ module.exports = {
   onGetAllPosts,
   onGetAllMyPosts,
   onCreatePost,
+  onEditPost,
   onGetAllPages,
   onGetAllMyPages,
-  onCreatePage
+  onCreatePage,
+  onGetOnePage
 }

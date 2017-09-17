@@ -19,15 +19,15 @@
     <h1>Dongle</h1>
 
     <div class="dropdown ">
-      <button class="dropbtn">Settings</button>
+      <button class="dropbtn setting">Settings</button>
       <div class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
+        <a href="#">My Account</a>
+        <a href="#">Options</a>
         <div class="dropdown">
-          <button class="dropbtn">changePassword</button>
+          <button class="cahngepass dropbtn">changePassword</button>
           <div class="dropdown-content">
             <form id="change-password">
-              <input type="password" name="credentials[old]" value="" placeholder="Old Password">
+              <input class="changepass1" type="password" name="credentials[old]" value="" placeholder="Old Password">
               <input type="password" name="credentials[new]" value="" placeholder="New Password">
               <input type="submit" name="submit" value="Change Password" class="submit">
             </form>
@@ -49,8 +49,8 @@
       </div>
       <div class="dropdown">
       <li><a href="#pages">Pages</a></li>
-      <div id="dropdown-content" class="dropdown-content">
-        <div id="pages-dropdown">
+      <div id="pages-dropdown" class="dropdown-content">
+        <div id="listOfPages">
         </div>
       </div>
     </div>
@@ -64,7 +64,7 @@
       <li>
         <div>
         <form class="sign-out" id="signOut">
-          <button id="sign-out" type="submit" class="sign-out btn-default"> Sign Out </button>
+          <button id="sign-out" type="submit" class="signout-button btn-default"> Sign Out </button>
         </form>
       </div>
     </li>
@@ -77,26 +77,27 @@
     <form id="sign-up" class="sign-up">
       <fieldset>
         <legend>Sign Up Below</legend>
-        <input type="text" name="credentials[email]" placeholder="Email">
+        <input class="email-textbox" type="text" name="credentials[email]" placeholder="Email">
         <br><br>
-        <input type="password" name="credentials[password]" placeholder="Create Password">
+        <input class="pass-textbox" type="password" name="credentials[password]" placeholder="Create Password">
         <br><br>
-        <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+        <input class="pass-confir-textbox" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
         <br><br>
-        <input type="submit" class="btn-default" name="submit" value="Sign Up!">
+        <input class="signup-button" type="submit" class="btn-default" name="submit" value="Sign Up!">
       </fieldset>
     </form>
   </div>
+  <br>
 
   <div class="signform">
     <form id="sign-in" class="sign-in">
       <fieldset>
         <legend>Login Below</legend>
-        <input type="text" name="credentials[email]" placeholder="Email">
+        <input class="email-textbox" type="text" name="credentials[email]" placeholder="Email">
         <br><br>
-        <input type="password" name="credentials[password]" placeholder="Password">
+        <input class="pass-textbox" type="password" name="credentials[password]" placeholder="Password">
         <br><br>
-        <input type="submit" id="sign-in-button" class="btn-default" name="submit" value="Sign In!">
+        <input class="signin-button" type="submit" id="sign-in-button" class="btn-default" name="submit" value="Sign In!">
       </fieldset>
     </form>
   </div>
@@ -129,7 +130,7 @@
           <br><br>
           <textarea name="body" placeholder="Body Here" id="textbox" class="textbox"></textarea>
           <br><br>
-          <input type="submit" id="submit-create-posts" class="submit-create-posts btn-default" name="submit" value="Submit!">
+          <input type="submit" id="submit-create-posts" class="submit submit-create-posts btn-default" name="submit" value="Submit!">
         </fieldset>
       </form>
     </div>
@@ -148,11 +149,13 @@
           <input id="pages-footer" class="pages-footer"
           type="text" name="footer" placeholder="Footer">
           <br><br>
-          <input type="submit" id="submit-create-pages" class="submit-create-pages btn-default" name="submit" value="Submit!">
+          <input type="submit" id="submit-create-pages" class="submit submit-create-pages btn-default" name="submit" value="Submit!">
         </fieldset>
       </form>
     </div>
   </div>
+
+  <button id="random" class="get-all-my-posts btn-default">Get ALL My Pages</button>
 
   <br><br>
 </main>
