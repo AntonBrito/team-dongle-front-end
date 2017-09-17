@@ -82,12 +82,31 @@ const createPost = (data) => {
   })
 }
 
-// TODO get ID of post to be updated
-// TODO finish this ajax request
-const editPost = (data) => {
-  console.log(data)
+const updatePost = (data, dataId) => {
+  console.log('update post data = ' + data)
+  console.log('update post dataId = ' + dataId)
   return $.ajax({
-    url: app.host + '/posts/'
+    url: app.host + '/posts/' + dataId,
+    method: 'PATCH',
+    data: {
+      'post': {
+        'title': data.title,
+        'body': data.body
+      }
+    },
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
+const deletePost = (dataId) => {
+  return $.ajax({
+    url: app.host + '/posts/' + dataId,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
   })
 }
 
@@ -149,6 +168,28 @@ const createPage = (data) => {
   })
 }
 
+const updatePage = (data, dataId) => {
+  console.log('update post data = ' + data)
+  console.log('update post dataId = ' + dataId)
+  return $.ajax({
+    url: app.host + '/pages/' + dataId,
+    method: 'PATCH',
+    data: {
+      'page': {
+        'title': data.title,
+        'sections': {
+          'heading': data.heading,
+          'body': data.body,
+          'footer': data.footer
+        }
+      }
+    },
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
 module.exports = {
   signIn,
   signUp,
@@ -158,10 +199,12 @@ module.exports = {
   getAllPosts,
   getAllMyPosts,
   createPost,
-  editPost,
+  updatePost,
+  deletePost,
   getAllPages,
   getAllMyPages,
   createPage,
+  updatePage,
   getOnePage,
   deletePage
 
