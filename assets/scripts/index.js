@@ -23,8 +23,15 @@ $(() => {
   $('#random').on('click', events.onGetAllMyPages)
   $('#update_posts_form').on('submit', events.onUpdatePost)
   $('#update_pages_form').on('submit', events.onUpdatePage)
-  // $('#pages-dropdown-page-list').on('click', events.onGetOnePage)
+  $('form').on('submit', function () {
+    $('input').val('')
+  })
+  // ///////////////////
+  // Views /////////////
+  // ///////////////////
+  $('#posts_page, #pages_page, #create_posts, #create_pages, #update_posts, #update_pages').hide()
 })
+
 $(document).on('click', '.postsEditButton', events.onUpdatePostSaveId)
 $(document).on('click', '#pages-dropdown-page-title', events.onGetOnePage)
 $(document).on('click', '.pagesDeleteButton', events.onDeletePage)
