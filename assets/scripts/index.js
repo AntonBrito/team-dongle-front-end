@@ -25,11 +25,18 @@ $(() => {
   $('#update_pages_form').on('submit', events.onUpdatePage)
   $('form').on('submit', function () {
     $('input').val('')
+    $('#message').empty()
   })
   // ///////////////////
   // Views /////////////
   // ///////////////////
   $('#posts_page, #pages_page, #create_posts, #create_pages, #update_posts, #update_pages').hide()
+  $('#get-every-post').on('click', function () {
+    $('#posts_page').show()
+  })
+  $('#get-all-my-posts').on('click', function () {
+    $('#posts_page').show()
+  })
 })
 
 $(document).on('click', '.postsEditButton', events.onUpdatePostSaveId)
