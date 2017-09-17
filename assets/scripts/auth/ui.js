@@ -38,6 +38,8 @@ const changePasswordfailure = (error) => {
 const logOutSuccess = (data) => {
   console.log(data)
   console.log('Succeded in logOutSuccess')
+  $('#signfo').show()
+  $('#message').html('You Have Signed Out!')
 }
 
 const logOutFailure = (error) => {
