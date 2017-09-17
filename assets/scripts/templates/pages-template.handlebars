@@ -1,9 +1,7 @@
 <!-- pages template -->
-{{#each pages as |page|}}
-  <div id="pages-content">
-    <h1>{{page.title}}</h1>
-    <h2>{{page.heading}}</h2>
-    <p>{{page.body}}</p>
-    <p>{{page.footer}}</p>
+  <div id="pages-content" data-id="{{dataId}}">
+    <h1>{{title}}</h1>
+    <h2>{{heading}}</h2>
+    <p>{{body}}</p>
+    <p>{{footer}}</p>
   </div>
-{{/each}}

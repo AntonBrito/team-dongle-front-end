@@ -13,14 +13,16 @@ const postsHandlebars = function (title, body) {
 // ///////////////////////////
 // template context for pages/
 // ///////////////////////////
-const pagesHandlebars = function () {
+const pagesHandlebars = function (title, heading, body, footer, dataId) {
   const pageHandlebarsTemplate = require('./templates/pages-template.handlebars')
   const context = {
-    'title': "I'm a Title!",
-    'heading': 'Look! I am a Header',
-    'body': 'I have body',
-    'footer': 'FEET'
+    'title': title,
+    'heading': heading,
+    'body': body,
+    'footer': footer,
+    'dataId': dataId
   }
+  console.log('info from handlebars' + title + heading + body + footer + dataId)
   const html = pageHandlebarsTemplate(context)
   $('#pages-div').append(html)
 }
