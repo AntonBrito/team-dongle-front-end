@@ -141,6 +141,7 @@ const createPageFailure = (error) => {
 const deletePageSuccess = (data) => {
   console.log(data)
   console.log('Succeded in deletePageSuccess')
+  $('#pages-div').empty()
 }
 
 const deletePageFailure = (error) => {
