@@ -92,6 +92,15 @@ const getOnePageSuccess = (data) => {
   // assign for edit or delete
   app.page = data.page
   console.log(app.page)
+  $('#pages-div').empty()
+  // data-id = data.pages[i]._id
+  const title = data.page.title
+  const heading = data.page.sections.heading
+  const body = data.page.sections.body
+  const footer = data.page.sections.footer
+  const dataId = data.page._id
+  console.log(title + heading + body + footer + dataId)
+  template.pagesHandlebars(title, heading, body, footer, dataId)
 }
 
 const getAllPagesFailure = (error) => {
