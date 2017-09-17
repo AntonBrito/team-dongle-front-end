@@ -87,12 +87,24 @@ body {
   width: 15%;
 }
 
-.changepass {
-
+.changepassbutton {
+  background-color: $maingreen;
+  border-radius: 10px;
+  box-sizing: content-box;
+  color: $white;
+  width: 145px;
 }
 
 .changepass1 {
   border-radius: 10px;
+  box-sizing: content-box;
+  width: 155px;
+}
+
+.changepass2 {
+  border-radius: 10px;
+  box-sizing: content-box;
+  width: 155px;
 }
 
 // This is a main div for allposts and myposts button
@@ -103,14 +115,14 @@ body {
 
 // This is allposts button
 .allposts {
-  background-color: $lightgrey;
-  border: 2px solid $maingreen;
+  background-color: $maingreen;
+  border: 2px solid $cream;
   border-radius: 20px;
   box-sizing: border-box;
-  color: $cream;
+  color: $white;
   font-size: 20px;
   height: 30px;
-  width: 10%;
+  width: 15%;
 }
 
 // This is myposts button
@@ -170,7 +182,7 @@ body {
 }
 
 .pages-dropdown {
-  word-spacing: 2px;
+  word-spacing: 1px;
 }
 
 li {
@@ -185,12 +197,11 @@ h1 {
 }
 
 .listofpages {
-  word-spacing: normal;
+  word-spacing: 1px;
 }
 
 .navbar {
   background-color: $lightgrey;
-  border-radius: 20px;
   color: $lightgreen;
   font-size: 30px;
   text-align: center;
@@ -210,6 +221,7 @@ legend {
   border: 2px solid $maingreen;
   border-radius: 20px;
   font-size: 20px;
+  text-align: center;
   width: 20%;
 }
 
@@ -218,8 +230,14 @@ legend {
   border: 2px solid $maingreen;
   border-radius: 20px;
   font-size: 20px;
+  text-align: center;
   width: 20%;
  }
+
+textarea {
+  color: $maingreen;
+  padding: 12px 25px;
+}
 
 .update-posts {
   text-align: center;
@@ -234,6 +252,7 @@ legend {
   border: 2px solid $maingreen;
   border-radius: 20px;
   font-size: 20px;
+  text-align: center;
   width: 20%;
  }
 
@@ -242,6 +261,7 @@ legend {
   border: 2px solid $maingreen;
   border-radius: 20px;
   font-size: 17px;
+  text-align: center;
   width: 30%;
  }
 
@@ -251,6 +271,7 @@ legend {
   border-radius: 20px;
   font-size: 15px;
   height: 50px;
+  padding: 12px 20px;
   width: 40%;
  }
 
@@ -259,6 +280,7 @@ legend {
   border: 2px solid $maingreen;
   border-radius: 20px;
   font-size: 17px;
+  text-align: center;
   width: 30%;
  }
 
@@ -268,6 +290,7 @@ legend {
   border-radius: 20px;
   font-size: 15px;
   height: 50px;
+  padding: 12px 20px;
   width: 40%;
  }
 

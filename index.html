@@ -21,15 +21,14 @@
     <div class="dropdown ">
       <button class="dropbtn setting">Settings</button>
       <div class="dropdown-content">
-        <a href="#">My Account</a>
-        <a href="#">Options</a>
-        <div class="dropdown">
-          <button class="cahngepass dropbtn">changePassword</button>
+
+        <!-- <div class="dropdown"> -->
+          <button class="changepass dropbtn">changePassword</button>
           <div class="dropdown-content">
-            <form id="change-password">
+            <form id="change-password" class="changepass1">
               <input class="changepass1" type="password" name="credentials[old]" value="" placeholder="Old Password">
-              <input type="password" name="credentials[new]" value="" placeholder="New Password">
-              <input type="submit" name="submit" value="Change Password" class="submit">
+              <input class="changepass2" type="password" name="credentials[new]" value="" placeholder="New Password">
+              <input class="changepassbutton"type="submit" name="submit" value="Change Password" class="submit">
             </form>
           </div>
         </div>
@@ -71,7 +70,7 @@
     </ul>
 </div>
   <main>
-
+  <br>
   <div id="signfo" class="signfo">
   <div class="signfor">
     <form id="sign-up" class="sign-up">
@@ -154,7 +153,7 @@
       </form>
     </div>
   </div>
-
+  <br><br>
   <div id="update-posts" class="update-posts">
     <form id=update_posts class="update_posts">
       <fieldset>
