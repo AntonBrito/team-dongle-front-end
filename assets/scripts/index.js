@@ -71,6 +71,7 @@ $(() => {
 })
 
 $(document).on('click', '.postsEditButton', events.onUpdatePostSaveId)
+$(document).on('click', '.pagesEditButton', events.onUpdatePageSaveId)
 $(document).on('click', '#pages-dropdown-page-title', events.onGetOnePage)
 $(document).on('click', '.pagesDeleteButton', events.onDeletePage)
 $(document).on('click', '.postsDeleteButton', events.onDeletePost)
@@ -80,6 +81,9 @@ $(document).on('click', '.pagesEditButton', function () {
 $(document).on('click', '.postsEditButton', function () {
   $('#update_posts').show()
 })
+
+$('.postsEditButton, .postsDeleteButton').hide()
+
 // const pageList = document.getElementById('pages-dropdown-page-list')
 // $(pageList).on('click', events.onGetOnePage)
 // use require without a reference to ensure a file is bundled

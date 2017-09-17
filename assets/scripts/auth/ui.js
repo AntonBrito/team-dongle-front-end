@@ -20,6 +20,7 @@ const signInSuccess = (data) => {
   console.log(app.user)
   $('#signfo').hide()
   $('#message').html('You Have Signed In!')
+  $('#posts_page').hide()
 }
 
 const signInFailure = (error) => {
@@ -58,6 +59,7 @@ const getAllPostsSuccess = (data) => {
     const dataId = data.posts[i]._id
     template.postsHandlebars(title, body, dataId)
   }
+  $('.postsEditButton, .postsDeleteButton').hide()
 }
 const getAllPostsFailure = (err) => {
   console.log(err)
