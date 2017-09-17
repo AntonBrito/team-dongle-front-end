@@ -1,11 +1,12 @@
 // ///////////////////////////
 // template context for posts/
 // ///////////////////////////
-const postsHandlebars = function (title, body) {
+const postsHandlebars = function (title, body, dataId) {
   const postHandlebarsTemplate = require('./templates/posts-template.handlebars')
   const context = {
     'title': title,
-    'body': body
+    'body': body,
+    'dataId': dataId
   }
   const postTemplate = postHandlebarsTemplate(context)
   $('#post-div').append(postTemplate)
