@@ -87,7 +87,7 @@ const createPost = (data) => {
 const editPost = (data) => {
   console.log(data)
   return $.ajax({
-    url: app.host + 'posts/'
+    url: app.host + '/posts/'
   })
 }
 
@@ -113,6 +113,16 @@ const getOnePage = (dataId) => {
   return $.ajax({
     url: app.host + '/pages/' + dataId,
     method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
+const deletePage = (dataId) => {
+  return $.ajax({
+    url: app.host + '/pages/' + dataId,
+    method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + app.user.token
     }
@@ -152,6 +162,7 @@ module.exports = {
   getAllPages,
   getAllMyPages,
   createPage,
-  getOnePage
+  getOnePage,
+  deletePage
 
 }
