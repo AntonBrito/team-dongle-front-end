@@ -122,6 +122,15 @@ const onCreatePage = function (event) {
     .catch(ui.createPageFailure)
 }
 
+const onUpdatePageSaveId = function (event) {
+  const dataId = this.getAttribute('data-id')
+  console.log('onUpdatePostSaveId = ' + dataId)
+  event.preventDefault()
+  $('#update_pages_form').attr({
+    'data-id': dataId
+  })
+}
+
 const onUpdatePage = function (event) {
   const data = getFormFields(this)
   const dataId = this.getAttribute('data-id')
@@ -154,6 +163,7 @@ module.exports = {
   onGetAllPages,
   onGetAllMyPages,
   onCreatePage,
+  onUpdatePageSaveId,
   onUpdatePage,
   onGetOnePage,
   onDeletePage
