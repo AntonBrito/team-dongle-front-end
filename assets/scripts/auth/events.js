@@ -103,6 +103,14 @@ const onCreatePage = function (event) {
     .catch(ui.createPageFailure)
 }
 
+const onDeletePage = function (event) {
+  const dataId = this.getAttribute('data-id')
+  event.preventDefault()
+  api.deletePage(dataId)
+    .then(ui.deletePageSuccess)
+    .catch(ui.deletePageFailure)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
@@ -115,5 +123,6 @@ module.exports = {
   onGetAllPages,
   onGetAllMyPages,
   onCreatePage,
-  onGetOnePage
+  onGetOnePage,
+  onDeletePage
 }
