@@ -39,7 +39,9 @@ const logOutSuccess = (data) => {
   console.log(data)
   console.log('Succeded in logOutSuccess')
   $('#signfo').show()
+  $('#posts_page, #pages_page, #create_posts, #create_pages, #update_posts, #update_page').hide()
   $('#message').html('You Have Signed Out!')
+  $('#listOfPages').empty()
 }
 
 const logOutFailure = (error) => {
@@ -132,9 +134,21 @@ const getAllMyPagesFailure = (error) => {
 const createPageSuccess = (data) => {
   console.log(data)
   console.log('Succeded in createPageSuccess')
+  $('textarea').val('')
 }
 
 const createPageFailure = (error) => {
+  console.log(error)
+  console.log('Failed in createPageFailure')
+}
+
+const createPostSuccess = (data) => {
+  console.log(data)
+  console.log('Succeded in createPageSuccess')
+  $('textarea').val('')
+}
+
+const createPostFailure = (error) => {
   console.log(error)
   console.log('Failed in createPageFailure')
 }
@@ -214,6 +228,8 @@ module.exports = {
   getAllMyPagesFailure,
   createPageSuccess,
   createPageFailure,
+  createPostSuccess,
+  createPostFailure,
   deletePageSuccess,
   deletePageFailure,
   deletePostSuccess,
