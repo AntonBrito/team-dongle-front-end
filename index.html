@@ -50,7 +50,7 @@
       <div class="dropdown">
       <li><a href="#pages">Pages</a></li>
       <div id="pages-dropdown" class="dropdown-content">
-        <div id="listOfPages">
+        <div id="listOfPages" class="listofpages">
         </div>
       </div>
     </div>
@@ -107,7 +107,7 @@
 
   <div id="posts_page" class="posts_page">
     <button id="allposts" type="submit" class="allposts btn-default">All Posts</button>
-    <button id="myposts" type="submit" class="myposts btn-default">My Posts</button>
+    <!-- <button id="myposts" type="submit" class="myposts btn-default">My Posts</button> -->
     <div id="post-div">
     </div>
   </div>
@@ -155,8 +155,38 @@
     </div>
   </div>
 
-  <button id="random" class="get-all-my-posts btn-default">Get ALL My Pages</button>
+  <div id="update-posts" class="update-posts">
+    <form id=update_posts class="update_posts">
+      <fieldset>
+        <legend>Update a Post</legend>
+        <input id="update-posts-title" class="update-posts-title" type="text" name="title" placeholder="Title Here">
+        <br><br>
+        <textarea name="body" placeholder="Body Here" id="textbox" class="textbox"></textarea>
+        <br><br>
+        <input type="submit" id="submit-update-posts" class="submit submit-update-posts btn-default" name="submit" value="Update!">
+      </fieldset>
+    </form>
+  </div>
+  <br><br>
 
+  <div id="update_pages" class="update-pages">
+    <form id="update_pages" class="update_pages">
+      <fieldset>
+        <legend>Update a Page</legend>
+        <input id="pages-title" class="pages-title" type="text" name="title" placeholder="Title Here">
+        <br><br>
+        <input id="update-pages-header" class="update-pages-header"
+        type="text" name="heading" placeholder="Header">
+        <br><br>
+        <textarea name="body" placeholder="Body Here" id="textbox" class="textbox"></textarea>
+        <br><br>
+        <input id="update-pages-footer" class="update-pages-footer"
+        type="text" name="footer" placeholder="Footer">
+        <br><br>
+        <input type="submit" id="submit-update-pages" class="submit submit-update-pages btn-default" name="submit" value="Update!">
+      </fieldset>
+    </form>
+  </div>
   <br><br>
 </main>
   <footer>
