@@ -18,6 +18,8 @@ const signInSuccess = (data) => {
   app.user = data.user
   console.log('signed in!')
   console.log(app.user)
+  $('#signfo').hide()
+  $('#message').html('You Have Signed In!')
 }
 
 const signInFailure = (error) => {
