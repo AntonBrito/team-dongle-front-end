@@ -30,9 +30,7 @@ $(() => {
     $('input').val('')
     $('#message').empty()
   })
-  // ///////////////////
-  // Views /////////////
-  // ///////////////////
+// views
   $('#posts_page, #pages_page, #create_posts, #create_pages, #update_posts, #update_pages').hide()
   $('#get-every-post').on('click', function () {
     $('#posts_page').show()
