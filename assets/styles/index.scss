@@ -6,11 +6,6 @@ header {
   background-color: $maingreen;
 }
 
-#pages-div {
-  border-color: $maingreen;
-  border-style: dotted;
-}
-
 body {
   background-color: $lightcream;
 }
@@ -122,7 +117,7 @@ body {
   color: $white;
   font-size: 20px;
   height: 30px;
-  width: 15%;
+  width: 25%;
 }
 
 // This is myposts button
@@ -169,6 +164,15 @@ body {
   text-decoration: none;
 }
 
+.get-every-post:hover {
+  background-color: $azul;
+}
+
+.get-all-my-posts:hover {
+  background-color: $azul;
+  font-size: 30px;
+}
+
 .dropdown-content a:hover {
   background-color: $azul;
 }
@@ -200,13 +204,13 @@ h1 {
   font-size: 20px;
 }
 
-.listofpages {
+.dropdown-content {
   word-spacing: 1px;
 }
 
 .navbar {
   background-color: $lightgrey;
-  color: $lightgreen;
+  color: $maingreen;
   font-size: 30px;
   text-align: center;
   word-spacing: 40px;
