@@ -184,9 +184,13 @@ h1 {
   text-align: center;
 }
 
+.listofpages {
+  word-spacing: normal;
+}
+
 .navbar {
-  border-radius: 20px;
   background-color: $lightgrey;
+  border-radius: 20px;
   color: $lightgreen;
   font-size: 30px;
   text-align: center;
@@ -194,7 +198,7 @@ h1 {
 }
 
 legend {
-  font-size: 40px
+  font-size: 40px;
 }
 
 .create {
@@ -215,6 +219,39 @@ legend {
   border-radius: 20px;
   font-size: 20px;
   width: 20%;
+ }
+
+.update-posts {
+  text-align: center;
+}
+
+.update-pages {
+  text-align: center;
+}
+
+.update-posts-title {
+  background-color: $canvas;
+  border: 2px solid $maingreen;
+  border-radius: 20px;
+  font-size: 20px;
+  width: 20%;
+ }
+
+.update-pages-header {
+  background-color: $canvas;
+  border: 2px solid $maingreen;
+  border-radius: 20px;
+  font-size: 17px;
+  width: 30%;
+ }
+
+.update-pages-footer {
+  background-color: $canvas;
+  border: 2px solid $maingreen;
+  border-radius: 20px;
+  font-size: 15px;
+  height: 50px;
+  width: 40%;
  }
 
 .pages-header {
