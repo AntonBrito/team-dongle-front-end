@@ -108,10 +108,10 @@ const getAllMyPages = () => {
   })
 }
 
-const getOnePage = (data) => {
-  console.log(data)
+const getOnePage = (dataId) => {
+  console.log('api.js dataId =' + dataId)
   return $.ajax({
-    url: app.host + '/pages/' + data.pages.id,
+    url: app.host + '/pages/' + dataId,
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + app.user.token

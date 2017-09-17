@@ -30,8 +30,9 @@ const pagesHandlebars = function () {
 const dropdownHandlebars = function (title, dataId) {
   const pageHandlebarsTemplate = require('./templates/pages-dropdown-list.handlebars')
   const context = {
+
     'title': title,
-    'data-id': dataId
+    'dataId': dataId
   }
   const html = pageHandlebarsTemplate(context)
   $('#listOfPages').append(html)
