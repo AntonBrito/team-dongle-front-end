@@ -103,7 +103,6 @@ const onGetOnePage = function (event) {
     .catch(ui.getOnePageFailure)
 }
 
-// TODO add promise to call getAllMyPages
 const onCreatePage = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
@@ -127,6 +126,7 @@ const onDeletePage = function (event) {
   event.preventDefault()
   api.deletePage(dataId)
     .then(ui.deletePageSuccess)
+    .then(onGetAllMyPages)
     .catch(ui.deletePageFailure)
 }
 
