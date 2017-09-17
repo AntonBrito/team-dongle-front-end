@@ -30,13 +30,45 @@ $(() => {
     $('input').val('')
     $('#message').empty()
   })
-// views
+
+  // ///// //
+  // views //
+  // ///// //
+
+  // landing page
   $('#posts_page, #pages_page, #create_posts, #create_pages, #update_posts, #update_pages').hide()
+
+  // posts view
   $('#get-every-post').on('click', function () {
     $('#posts_page').show()
+    $('#message').empty()
+    $('#pages_page, #create_posts, #create_pages, #update_posts, #update_pages').hide()
   })
   $('#get-all-my-posts').on('click', function () {
     $('#posts_page').show()
+    $('#message').empty()
+    $('#pages_page, #create_posts, #create_pages, #update_posts, #update_pages').hide()
+
+  // pages view
+  })
+  $('#listOfPages').on('click', function () {
+    $('#pages_page').show()
+    $('#message').empty()
+    $('#posts_page, #create_posts, #create_pages, #update_posts, #update_pages').hide()
+  })
+
+  // create posts view
+  $('#show-post-create').on('click', function () {
+    $('#create_posts').show()
+    $('#message').empty()
+    $('#posts_page, #pages_page, #create_pages, #update_posts, #update_pages,').hide()
+  })
+
+  // create pages view
+  $('#show-page-create').on('click', function () {
+    $('#create_pages').show()
+    $('#message').empty()
+    $('#posts_page, #pages_page, #create_posts, #update_posts, #update_pages').hide()
   })
 })
 
