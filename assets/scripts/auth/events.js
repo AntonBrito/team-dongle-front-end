@@ -15,22 +15,6 @@ const onSignUp = function (event) {
     .catch(ui.signUpFailure)
 }
 
-const onGetAllMyPages = function () {
-  // event.preventDefault()
-  api.getAllMyPages()
-    .then(ui.getAllMyPagesSuccess)
-    .catch(ui.getAllMyPagesFailure)
-}
-
-const onGetOnePage = function (event) {
-  console.log('onGetOnePage called')
-  const data = getFormFields(this)
-  console.log('data = ' + data)
-  api.getOnePage(data)
-    .then(ui.getOnePageSuccess)
-    .catch(ui.getOnePageFailure)
-}
-
 const onSignIn = function (event) {
   console.log('I did something in onSignIn!')
   const data = getFormFields(this)
@@ -92,6 +76,22 @@ const onGetAllPages = function (event) {
   api.getAllPages()
     .then(ui.getAllPagesSuccess)
     .catch(ui.getAllPagesFailure)
+}
+
+const onGetAllMyPages = function () {
+  // event.preventDefault()
+  api.getAllMyPages()
+    .then(ui.getAllMyPagesSuccess)
+    .catch(ui.getAllMyPagesFailure)
+}
+
+const onGetOnePage = function (event) {
+  console.log('onGetOnePage called')
+  const dataId = this.getAttribute('data-id')
+  console.log('dataId = ' + dataId)
+  api.getOnePage(dataId)
+    .then(ui.getOnePageSuccess)
+    .catch(ui.getOnePageFailure)
 }
 
 // TODO add promise to call getAllMyPages
