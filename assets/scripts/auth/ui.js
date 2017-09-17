@@ -138,6 +138,16 @@ const createPageFailure = (error) => {
   console.log('Failed in createPageFailure')
 }
 
+const deletePageSuccess = (data) => {
+  console.log(data)
+  console.log('Succeded in deletePageSuccess')
+}
+
+const deletePageFailure = (error) => {
+  console.log(error)
+  console.log('Failed in deletePageFailure')
+}
+
 module.exports = {
   signUpFailure,
   signUpSuccess,
@@ -157,5 +167,7 @@ module.exports = {
   getAllMyPagesSuccess,
   getAllMyPagesFailure,
   createPageSuccess,
-  createPageFailure
+  createPageFailure,
+  deletePageSuccess,
+  deletePageFailure
 }
