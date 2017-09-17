@@ -67,7 +67,8 @@ const getAllMyPostsSuccess = (data) => {
   for (let i = 0; i < data.posts.length; i++) {
     const title = data.posts[i].title
     const body = data.posts[i].body
-    template.postsHandlebars(title, body)
+    const dataId = data.posts[i]._id
+    template.postsHandlebars(title, body, dataId)
   }
 }
 

@@ -63,9 +63,19 @@ const onCreatePost = function (event) {
     .catch(ui.createPostFailure)
 }
 
+const onUpdatePostSaveId = function (event) {
+  const dataId = this.getAttribute('data-id')
+  console.log('onUpdatePostSaveId = ' + dataId)
+  event.preventDefault()
+  $('#update_posts_form').attr({
+    'data-id': dataId
+  })
+}
+
 const onUpdatePost = function (event) {
   const data = getFormFields(this)
   const dataId = this.getAttribute('data-id')
+  console.log('onUpdatePost dataId = ' + dataId)
   event.preventDefault()
   api.updatePost(data, dataId)
     .then(ui.editPostSuccess)
@@ -138,6 +148,7 @@ module.exports = {
   onGetAllPosts,
   onGetAllMyPosts,
   onCreatePost,
+  onUpdatePostSaveId,
   onUpdatePost,
   onDeletePost,
   onGetAllPages,
