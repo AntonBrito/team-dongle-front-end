@@ -1,5 +1,7 @@
 <!-- posts template -->
-  <div id="posts-content">
+  <div id="posts-content" data-id="{{dataId}}">
     <h3>{{title}}</h3>
     <p>{{body}}</p>
+    <button type="button" class="postsEditButton" data-id="{{dataId}}" name="editButton">Edit</button>
+    <button type="button" class="postsDeleteButton" data-id="{{dataId}}" name="deleteButton">Delete</button>
   </div>

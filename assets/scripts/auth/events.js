@@ -63,12 +63,31 @@ const onCreatePost = function (event) {
     .catch(ui.createPostFailure)
 }
 
-const onEditPost = function (event) {
-  const data = getFormFields(this)
+const onUpdatePostSaveId = function (event) {
+  const dataId = this.getAttribute('data-id')
+  console.log('onUpdatePostSaveId = ' + dataId)
   event.preventDefault()
-  api.editPost(data)
-    .then(ui.onEditPostSuccess)
-    .catch(ui.onEditPostFailure)
+  $('#update_posts_form').attr({
+    'data-id': dataId
+  })
+}
+
+const onUpdatePost = function (event) {
+  const data = getFormFields(this)
+  const dataId = this.getAttribute('data-id')
+  console.log('onUpdatePost dataId = ' + dataId)
+  event.preventDefault()
+  api.updatePost(data, dataId)
+    .then(ui.editPostSuccess)
+    .catch(ui.editPostFailure)
+}
+
+const onDeletePost = function (event) {
+  const dataId = this.getAttribute('data-id')
+  event.preventDefault()
+  api.deletePost(dataId)
+    .then(ui.deletePostSuccess)
+    .catch(ui.deletePostFailure)
 }
 
 const onGetAllPages = function (event) {
@@ -94,13 +113,31 @@ const onGetOnePage = function (event) {
     .catch(ui.getOnePageFailure)
 }
 
-// TODO add promise to call getAllMyPages
 const onCreatePage = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
   api.createPage(data)
     .then(ui.createPageSuccess)
+    .then(onGetAllMyPages)
     .catch(ui.createPageFailure)
+}
+
+const onUpdatePage = function (event) {
+  const data = getFormFields(this)
+  const dataId = this.getAttribute('data-id')
+  event.preventDefault()
+  api.updatePage(data, dataId)
+    .then(ui.updatePageSuccess)
+    .catch(ui.updatePageFailure)
+}
+
+const onDeletePage = function (event) {
+  const dataId = this.getAttribute('data-id')
+  event.preventDefault()
+  api.deletePage(dataId)
+    .then(ui.deletePageSuccess)
+    .then(onGetAllMyPages)
+    .catch(ui.deletePageFailure)
 }
 
 module.exports = {
@@ -111,9 +148,13 @@ module.exports = {
   onGetAllPosts,
   onGetAllMyPosts,
   onCreatePost,
-  onEditPost,
+  onUpdatePostSaveId,
+  onUpdatePost,
+  onDeletePost,
   onGetAllPages,
   onGetAllMyPages,
   onCreatePage,
-  onGetOnePage
+  onUpdatePage,
+  onGetOnePage,
+  onDeletePage
 }

@@ -18,10 +18,8 @@ const signInSuccess = (data) => {
   app.user = data.user
   console.log('signed in!')
   console.log(app.user)
-  // const titles = app.user.pages.title
-  // for (let i = 0; i < titles.length; i++) {
-  //   $('#pages-dropdown').append(titles[i])
-  // }
+  $('#signfo').hide()
+  $('#message').html('You Have Signed In!')
 }
 
 const signInFailure = (error) => {
@@ -53,7 +51,8 @@ const getAllPostsSuccess = (data) => {
   for (let i = 0; i < data.posts.length; i++) {
     const title = data.posts[i].title
     const body = data.posts[i].body
-    template.postsHandlebars(title, body)
+    const dataId = data.posts[i]._id
+    template.postsHandlebars(title, body, dataId)
   }
 }
 const getAllPostsFailure = (err) => {
@@ -70,7 +69,8 @@ const getAllMyPostsSuccess = (data) => {
   for (let i = 0; i < data.posts.length; i++) {
     const title = data.posts[i].title
     const body = data.posts[i].body
-    template.postsHandlebars(title, body)
+    const dataId = data.posts[i]._id
+    template.postsHandlebars(title, body, dataId)
   }
 }
 
@@ -93,7 +93,6 @@ const getOnePageSuccess = (data) => {
   app.page = data.page
   console.log(app.page)
   $('#pages-div').empty()
-  // data-id = data.pages[i]._id
   const title = data.page.title
   const heading = data.page.sections.heading
   const body = data.page.sections.body
@@ -138,6 +137,61 @@ const createPageFailure = (error) => {
   console.log('Failed in createPageFailure')
 }
 
+const deletePageSuccess = (data) => {
+  console.log(data)
+  console.log('Succeded in deletePageSuccess')
+  $('#pages-div').empty()
+}
+
+const deletePageFailure = (error) => {
+  console.log(error)
+  console.log('Failed in deletePageFailure')
+}
+
+const deletePostSuccess = (data) => {
+  console.log(data)
+  console.log('Succeded in deletePostSuccess')
+}
+
+const deletePostFailure = (error) => {
+  console.log(error)
+  console.log('Failed in deletePostFailure')
+}
+
+const updatePageSuccess = (data) => {
+  console.log(data)
+  console.log('Succeded in updatePageSuccess')
+  $('#pages-div').empty()
+  const title = data.page.title
+  const heading = data.page.sections.heading
+  const body = data.page.sections.body
+  const footer = data.page.sections.footer
+  const dataId = data.page._id
+  console.log(title + heading + body + footer + dataId)
+  template.pagesHandlebars(title, heading, body, footer, dataId)
+}
+
+const updatePageFailure = (error) => {
+  console.log(error)
+  console.log('Failed in updatePageFailure')
+}
+
+const updatePostSuccess = (data) => {
+  console.log(data)
+  console.log('Succeded in deletePageSuccess')
+  $('#post-div').empty()
+  for (let i = 0; i < data.posts.length; i++) {
+    const title = data.posts[i].title
+    const body = data.posts[i].body
+    template.postsHandlebars(title, body)
+  }
+}
+
+const updatePostFailure = (error) => {
+  console.log(error)
+  console.log('Failed in deletePageFailure')
+}
+
 module.exports = {
   signUpFailure,
   signUpSuccess,
@@ -157,5 +211,13 @@ module.exports = {
   getAllMyPagesSuccess,
   getAllMyPagesFailure,
   createPageSuccess,
-  createPageFailure
+  createPageFailure,
+  deletePageSuccess,
+  deletePageFailure,
+  deletePostSuccess,
+  deletePostFailure,
+  updatePageSuccess,
+  updatePageFailure,
+  updatePostSuccess,
+  updatePostFailure
 }

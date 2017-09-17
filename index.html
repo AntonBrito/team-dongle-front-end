@@ -21,15 +21,14 @@
     <div class="dropdown ">
       <button class="dropbtn setting">Settings</button>
       <div class="dropdown-content">
-        <a href="#">My Account</a>
-        <a href="#">Options</a>
-        <div class="dropdown">
-          <button class="cahngepass dropbtn">changePassword</button>
+
+        <!-- <div class="dropdown"> -->
+          <button class="changepass dropbtn">changePassword</button>
           <div class="dropdown-content">
-            <form id="change-password">
+            <form id="change-password" class="changepass1">
               <input class="changepass1" type="password" name="credentials[old]" value="" placeholder="Old Password">
-              <input type="password" name="credentials[new]" value="" placeholder="New Password">
-              <input type="submit" name="submit" value="Change Password" class="submit">
+              <input class="changepass2" type="password" name="credentials[new]" value="" placeholder="New Password">
+              <button class="changepassbutton submit"type="submit" name="submit" value="Change Password">Change Password</button>
             </form>
           </div>
         </div>
@@ -43,17 +42,17 @@
       <div class="dropdown">
         <li><a href="#posts">Posts</a></li>
         <div class="dropdown-content">
-          <a href="#">All posts</a>
-          <a href="#">My posts</a>
+          <div id="get-every-post">All posts</div>
+          <div id="get-all-my-posts">My posts</div>
         </div>
       </div>
       <div class="dropdown">
-      <li><a href="#pages">Pages</a></li>
-      <div id="pages-dropdown" class="dropdown-content">
-        <div id="listOfPages">
+        <li><a href="#pages">Pages</a></li>
+        <div id="pages-dropdown" class="dropdown-content">
+          <div id="listOfPages" class="listofpages">
+          </div>
         </div>
       </div>
-    </div>
       <div class="dropdown">
         <li><a href="#create">Create</a></li>
         <div class="dropdown-content">
@@ -63,66 +62,71 @@
       </div>
       <li>
         <div>
-        <form class="sign-out" id="signOut">
-          <button id="sign-out" type="submit" class="signout-button btn-default"> Sign Out </button>
-        </form>
-      </div>
-    </li>
+          <form class="sign-out" id="signOut">
+            <button id="sign-out" type="submit" class="signout-button btn-default"> Sign Out </button>
+          </form>
+        </div>
+      </li>
     </ul>
-</div>
+  </div>
   <main>
 
-  <div id="signfo" class="signfo">
-  <div class="signfor">
-    <form id="sign-up" class="sign-up">
-      <fieldset>
-        <legend>Sign Up Below</legend>
-        <input class="email-textbox" type="text" name="credentials[email]" placeholder="Email">
-        <br><br>
-        <input class="pass-textbox" type="password" name="credentials[password]" placeholder="Create Password">
-        <br><br>
-        <input class="pass-confir-textbox" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-        <br><br>
-        <input class="signup-button" type="submit" class="btn-default" name="submit" value="Sign Up!">
-      </fieldset>
-    </form>
-  </div>
-  <br>
+    <div id="signfo" class="signfo">
+      <div class="signfor">
+        <form id="sign-up" class="sign-up">
+          <fieldset>
+            <legend>Sign Up Below</legend>
+            <input class="email-textbox" type="text" name="credentials[email]" placeholder="Email">
+            <br><br>
+            <input class="pass-textbox" type="password" name="credentials[password]" placeholder="Create Password">
+            <br><br>
+            <input class="pass-confir-textbox" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+            <br><br>
+            <button class="signup-button btn-default" type="submit" name="submit" value="Sign Up!">Sign Up!</button>
+          </fieldset>
+        </form>
+      </div>
+      <br>
 
-  <div class="signform">
-    <form id="sign-in" class="sign-in">
-      <fieldset>
-        <legend>Login Below</legend>
-        <input class="email-textbox" type="text" name="credentials[email]" placeholder="Email">
-        <br><br>
-        <input class="pass-textbox" type="password" name="credentials[password]" placeholder="Password">
-        <br><br>
-        <input class="signin-button" type="submit" id="sign-in-button" class="btn-default" name="submit" value="Sign In!">
-      </fieldset>
-    </form>
-  </div>
-</div>
-
-  <br><br>
-
-  <div id="posts_page" class="posts_page">
-    <button id="allposts" type="submit" class="allposts btn-default">All Posts</button>
-    <button id="myposts" type="submit" class="myposts btn-default">My Posts</button>
-    <div id="post-div">
+      <div class="signform">
+        <form id="sign-in" class="sign-in">
+          <fieldset>
+            <legend>Login Below</legend>
+            <input class="email-textbox" type="text" name="credentials[email]" placeholder="Email">
+            <br><br>
+            <input class="pass-textbox" type="password" name="credentials[password]" placeholder="Password">
+            <br><br>
+            <button class="signin-button btn-default" type="submit" id="sign-in-button" name="submit" value="Sign In!">Sign In!</button>
+          </fieldset>
+        </form>
+      </div>
+      <br><br>
+      <div class="allpostsbutton" align=center>
+      <button id="allposts" type="submit" class="allposts btn-default">All Posts</button>
     </div>
-  </div>
-
-  <br><br>
-
-  <div id="pages_page" class="pages_page">
-    <div id="pages-div">
     </div>
-  </div>
 
-  <br><br>
+    <div id="message">
+    </div>
 
-  <div id="create" class="create">
-    <div id="create_posts" class="create_posts">
+    <br><br>
+
+    <div id="posts_page" class="posts_page">
+      <!-- <button id="myposts" type="submit" class="myposts btn-default">My Posts</button> -->
+      <div id="post-div">
+      </div>
+    </div>
+
+    <br><br>
+
+    <div id="pages_page" class="pages_page">
+      <div id="pages-div">
+      </div>
+    </div>
+
+    <br><br>
+
+    <div id="create_posts" class="create_posts" align=center>
       <form id=post_title class="posts_title">
         <fieldset>
           <legend>Create a Post</legend>
@@ -130,36 +134,65 @@
           <br><br>
           <textarea name="body" placeholder="Body Here" id="textbox" class="textbox"></textarea>
           <br><br>
-          <input type="submit" id="submit-create-posts" class="submit submit-create-posts btn-default" name="submit" value="Submit!">
+          <button type="submit" id="submit-create-posts" class="submit submit-create-posts btn-default" name="submit" value="Submit!">Submit!</button>
         </fieldset>
       </form>
     </div>
-    <br>
-    <div id="create_pages" class="create_pages">
+
+    <br></br>
+
+    <div id="create_pages" class="create_pages" align=center>
       <form id=pages_title class="pages_title">
         <fieldset>
           <legend>Create a Page</legend>
           <input id="pages-title" class="pages-title" type="text" name="title" placeholder="Title Here">
           <br><br>
-          <input id="pages-header" class="pages-header"
-          type="text" name="heading" placeholder="Header">
+          <input id="pages-header" class="pages-header" type="text" name="heading" placeholder="Header">
           <br><br>
           <textarea name="body" placeholder="Body Here" id="textbox" class="textbox"></textarea>
           <br><br>
-          <input id="pages-footer" class="pages-footer"
-          type="text" name="footer" placeholder="Footer">
+          <input id="pages-footer" class="pages-footer" type="text" name="footer" placeholder="Footer">
           <br><br>
-          <input type="submit" id="submit-create-pages" class="submit submit-create-pages btn-default" name="submit" value="Submit!">
+          <button type="submit" id="submit-create-pages" class="submit submit-create-pages btn-default" name="submit" value="Submit!">Submit!</button>
         </fieldset>
       </form>
     </div>
-  </div>
 
-  <button id="random" class="get-all-my-posts btn-default">Get ALL My Pages</button>
+    <div id="update_posts" class="update-posts">
+      <form id=update_posts_form class="update_posts">
+        <fieldset>
+          <legend>Update a Post</legend>
+          <input id="update-posts-title" class="update-posts-title" type="text" name="title" placeholder="Title Here">
+          <br><br>
+          <textarea name="body" placeholder="Body Here" id="textbox" class="textbox"></textarea>
+          <br><br>
+          <button type="submit" id="submit-update-posts" class="submit submit-update-posts btn-default" name="submit" value="Update!">Update!</button>
+        </fieldset>
+      </form>
+    </div>
+    <br><br>
 
-  <br><br>
-</main>
+    <div id="update_pages" class="update-pages">
+      <form id="update_pages_form" class="update_pages">
+        <fieldset>
+          <legend>Update a Page</legend>
+          <input id="pages-title" class="pages-title" type="text" name="title" placeholder="Title Here">
+          <br><br>
+          <input id="update-pages-header" class="update-pages-header" type="text" name="heading" placeholder="Header">
+          <br><br>
+          <textarea name="body" placeholder="Body Here" id="textbox" class="textbox"></textarea>
+          <br><br>
+          <input id="update-pages-footer" class="update-pages-footer" type="text" name="footer" placeholder="Footer">
+          <br><br>
+          <button type="submit" id="submit-update-pages" class="submit submit-update-pages btn-default" name="submit" value="Update!">Update!</button>
+        </fieldset>
+      </form>
+    </div>
+    <br><br>
+  </main>
+
   <footer>
     CopyRight & Design @ Team Dongle 2017-09-10
   </footer>
+
 </html>
