@@ -12,6 +12,11 @@ For future iterations, we wold like to incorporate amazon web services to allow 
 
 This app should not need the user to install any dependencies - just go to https://ga-project-3-team-dongle.github.io/team-dongle-front-end/ and start viewing content!
 
+# Technologies:
+This app uses HTML, CSS and JavaScript in combination with Handlebars templates to display data retrieved from the database via AJAX requests.
+
+The front-end communicates with a database built with MongoDB that uses Express for an API.
+
 ## User Stories:
 - As a signed-in user, I want to create (and edit) a webpages and blog posts.
 - As a user without an account, I want to be able to see posts and pages created by users, so I can see the community and possibilities before deciding to join.
