@@ -14,7 +14,7 @@ $(() => {
   $('#sign-up').on('submit', events.onSignUp)
   $('#sign-in').on('submit', events.onSignIn)
   $('#sign-out').on('click', events.onSignOut)
-  $('#changePassword').on('submit', events.onChangePassword)
+  $('#change-password').on('submit', events.onChangePassword)
   $('#allposts').on('click', events.onGetAllPosts)
   $('#get-every-post').on('click', events.onGetAllPosts)
   $('#get-all-my-posts').on('click', events.onGetAllMyPosts)
