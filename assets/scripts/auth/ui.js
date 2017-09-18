@@ -25,15 +25,17 @@ const signInSuccess = (data) => {
 
 const signInFailure = (error) => {
   console.log(error)
-  console.log('failure in signInFailure')
+  $('#message').html('Invalid password')
 }
 
 const changePasswordSuccess = (data) => {
   console.log(data)
+  $('#message').html('Successfully changed password!')
 }
 
 const changePasswordfailure = (error) => {
   console.log(error)
+  $('#message').html('Invalid OLD password.')
 }
 
 const logOutSuccess = (data) => {
