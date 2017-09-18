@@ -13,7 +13,7 @@ For future iterations, we wold like to incorporate amazon web services to allow 
 This app should not need the user to install any dependencies - just go to https://ga-project-3-team-dongle.github.io/team-dongle-front-end/ and start viewing content!
 
 # Technologies:
-This app uses HTML, CSS and JavaScript in combination with Handlebars templates to display data retrieved from the database via AJAX requests.
+This app uses HTML, CSS and JavaScript in combination with JQuery and Handlebars to display data retrieved from the database via AJAX requests.
 
 The front-end communicates with a database built with MongoDB that uses Express for an API.
 
